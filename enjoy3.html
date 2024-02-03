@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<title>Enjoy</title>
+<head>
+<!-- style -->
+<style>
+    .label{
+        color: white;
+        font-size: 30px;
+    }
+    .i{
+       color: #99BC85;
+       font-size: 20px;
+    }
+  </style>
+
+</head>
+<body>
+    <form action="/action_page.php"  style="background-color:#50623A ;">
+        <fieldset>
+            <legend style="color: beige;font-size: 40px;">Enjoy Programming:Enter your Details</legend>
+        <!-- perferred batch timming -->
+
+        <!-- perferred batch date -->
+        <label  class="i" for="batch date">Preferred Batch Date</label>
+        <input type="datetime-local" id="batch Date" name="batch date">t<label class="i">To</label>
+        <input type="datetime-local" id="batch Date" name="batch date"><br>
+        <br>
+        <br/>
+        <br>
+        <!-- DOB -->
+        <label  class="i" for="birthdaytime">DoB</label>
+        <input type="datetime-local" id="birthday" name="Birthday"><br/>
+        <br/>
+        <!-- Email -->
+        <label  class="i" for="email">Email:</label>
+        <input type="email" id="email" name="email"><br/>
+        <br/>
+        <!-- Contact no -->
+        <label class="i" for="phone">Contact No:</label>
+        <input type="tel" id="phone" name="phone" ><br/>
+        <br/>
+        <!-- Communication skill -->
+        <label  class="i" for="range"> Communication skill(Out of10):</label>
+        <input type="range" id="range" name="range" min="0" max="10"><br/>
+        <br/>
+        <!-- age -->
+        <label class="i" for="Age">Age:</label>
+        <input type="Age" id="Age" name="Age" ><br/>
+        <br/>
+        <!-- Tell sommething about your self -->
+        <label class="i">Tell sommething about your self:</label>
+        <textarea name="message" style="width:200px; height:100px; margin-left: 50px;"></textarea>
+         <br>
+        <!-- pick up batch -->
+        <label class="i"for="Batch">Pick A Batch:</label>
+           <select  name="batch" id="Batch">
+                <optgroup label="Batch">Proficient
+                    <option value="Proficient">Proficient</option>
+                        <option value="Ambition">Ambition</option>
+                             </optgroup>
+           </select>
+                             <br>
+                             <br/>
+                             <br>
+                <!-- Submit -->
+
+                <button style="background-color: #99BC85;" type="Sumbit"><a href="enjoy4.html">Submit</a></button>
+
+                
+        
+        </fieldset>
+    </form>
+
+
+
+</body>
+
+
+
+
+</html>
