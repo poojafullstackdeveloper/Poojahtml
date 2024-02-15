@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .annimation{
+            color: blue;
+            text-align: center;
+            animation-name:myannimation;
+            animation-duration: 5s;
+            animation-iteration-count: 3;
+            animation-timing-function: ease-out;
+        }
+
+        @keyframes myannimation {
+            0% {
+
+               opacity: 100%;
+               transform: translate(-400px);
+               color: red;
+               font-size: 25px;
+            }
+
+            50% {
+                opacity: 20%;
+                transform: translate(100px);
+                color: aqua;
+                font-size: 35px;
+                
+
+            }
+            75%{
+                opacity: 100%;
+                transform: translate3d(300px);
+                color: blueviolet;
+                font-size: 55px;
+
+
+            }
+
+        }
+    </style>
+
+<body>
+    <p class="annimation"> Pooja</p>
+</body>
+</head>
+
+</html>
