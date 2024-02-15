@@ -1,73 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    
-    <title>Flexlayout 2</title>
-   
+    <title>Flexlayout2</title>
+
     <style>
         /* main */
-        .main{
+        .main {
             height: 100vh;
             width: 100vw;
+            background-color: gray;
             display: flex;
             flex-direction: row;
-            background-color: gray;
         }
-        /* column */
-        .column{
-            height: 100vh;
+
+        /* coloumn1 */
+        .column1 {
+            height: 100%;
             width: 40%;
-            background-color: brown;
+            background-color: red;
+
 
         }
-        /* row1 */
-        .row{
-            height: 33%;
-            width:70%;
-            background-color: aqua;
-            display: flex;
-            flex-direction:column;
-                
-        }
-        .row1{
-            
-            background-color: blueviolet;
-            
-        }
-        /* row2 */
-        .row2{
-           
+
+        /* coloumn2 */
+        .column2 {
+            height: 100%;
+            width: 70%;
             background-color: blue;
-            
         }
-        /* row3 */
-        .row3{
-            
-            background-color:yellow;
-            
-        }
-        </style>
 
+        .row-one {
+            height: 33%;
+            width: 100vw;
+            background-color: green;
+        }
+
+        .row-two {
+            height: 33%;
+            width: 100vw;
+            background-color: orangered;
+        }
+
+        /* first box */
+        .first {
+            height: 100%;
+            width: 35%;
+            background-color: blueviolet;
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .top {
+            height: 50%;
+            width: 100%;
+            background-color: black;
+
+
+        }
+
+        .bottom {
+            height: 50%;
+            width:100%;
+            background-color: pink;
+
+
+        }
+
+        .row-three {
+            height: 33%;
+            width: 100vw;
+            background-color: yellow;
+        }
+    </style>
 </head>
+
 <body>
     <!-- main -->
     <div class="main">
-    <!-- column1 -->
-    <div class="column"></div>
-    
-    <!-- row1 -->
-    <div class=" row row1"></div>
-    <!-- row2 -->
-    <div class=" row row2"></div>
-
-    <!-- row3 -->
-    <div class=" row row3"></div>
-    
-
-
-
-
-
+        <!-- column1 -->
+        <div class="column1"></div>
+        <!-- column2 -->
+        <div class="column2">
+            <div class="row-one"></div>
+            <!-- row2 -->
+            <div class="row-two">
+                <div class="first"></div>
+                <div class=" top"></div>
+                <div class="bottom"></div>
+            </div>
+            <!-- row three -->
+            <div class="row-three"></div>
+        </div>
     </div>
+
 </body>
+
 </html>
