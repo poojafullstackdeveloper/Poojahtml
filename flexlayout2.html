@@ -2,99 +2,130 @@
 <html>
 
 <head>
-    <title>Flexlayout2</title>
-
     <style>
-        /* main */
         .main {
-            height: 100vh;
-            width: 100vw;
+            height: 900px;
+            width: 100%;
             background-color: gray;
             display: flex;
             flex-direction: row;
         }
 
-        /* coloumn1 */
-        .column1 {
-            height: 100%;
-            width: 40%;
-            background-color: red;
-
-
+        /* 1st column */
+        .firstcolumn {
+            height: 900px;
+            width: 30%;
+            background-color: aqua;
         }
 
-        /* coloumn2 */
-        .column2 {
-            height: 100%;
+        /* 2nd column */
+        .secondcolumn {
+            height: 900px;
             width: 70%;
             background-color: blue;
+            display: flex;
+            flex-direction: column;
         }
 
-        .row-one {
-            height: 33%;
-            width: 100vw;
+        /* firstrow */
+        .firstrow {
+            height: 300px;
+            width: 100%;
             background-color: green;
         }
 
-        .row-two {
-            height: 33%;
-            width: 100vw;
-            background-color: orangered;
-        }
-
-        /* first box */
-        .first {
-            height: 100%;
-            width: 35%;
-            background-color: blueviolet;
-            display: flex;
+        /* middlerow */
+        .middlerow {
+            height: 300px;
+            width: 100%;
+            background-color: coral;
             flex-direction: row;
-
+            display: flex;
         }
 
-        .top {
+        /* firstbox */
+        .firstbox {
+            height: 100%;
+            width: 50%;
+            background-color: black;
+        }
+
+        /* secondbox */
+        .secondbox {
+            height: 100%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* topbox */
+        .topbox {
             height: 50%;
             width: 100%;
-            background-color: black;
-
-
+            background-color: blue;
         }
 
-        .bottom {
+        .bottombox {
             height: 50%;
-            width:100%;
-            background-color: pink;
-
-
+            width: 100%;
+            background-color: chartreuse;
         }
 
-        .row-three {
-            height: 33%;
-            width: 100vw;
-            background-color: yellow;
+        /* lastrow */
+        .lastrow {
+            height: 300px;
+            width: 100%;
+            background-color: red;
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* lastrowone */
+        .lastrowone {
+            height: 100%;
+            width: 70%;
+            background-color: cadetblue;
+        }
+
+        /* lastrowtwo */
+        .lastrowtwo {
+            height: 100%;
+            width: 30%;
+            background-color: cornflowerblue;
         }
     </style>
+
 </head>
 
-<body>
-    <!-- main -->
+<body style="margin: 0; padding: 0;">
     <div class="main">
-        <!-- column1 -->
-        <div class="column1"></div>
-        <!-- column2 -->
-        <div class="column2">
-            <div class="row-one"></div>
-            <!-- row2 -->
-            <div class="row-two">
-                <div class="first"></div>
-                <div class=" top"></div>
-                <div class="bottom"></div>
+        <!-- 1st column -->
+        <div class="firstcolumn"></div>
+        <!-- 2nd column -->
+        <div class="secondcolumn">
+            <!-- 1st row -->
+            <div class="firstrow"></div>
+
+            <!-- 2nd row -->
+            <div class="middlerow">
+                <!-- firstbox -->
+                <div class="firstbox"></div>
+                <!-- secondbox -->
+                <div class="secondbox">
+                    <!-- topbox -->
+                    <div class="topbox"></div>
+                    <!-- bottombox -->
+                    <div class="bottombox"></div>
+                </div>
             </div>
-            <!-- row three -->
-            <div class="row-three"></div>
+
+            <!-- third row -->
+            <div class="lastrow">
+                <div class="lastrowone"></div>
+                <div class="lastrowtwo"></div>
+            </div>
         </div>
     </div>
-
 </body>
 
 </html>
