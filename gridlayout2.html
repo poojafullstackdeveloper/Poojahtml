@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Layout1</title>
+    <style>
+        /* main */
+        .main {
+            display: grid;
+            background-color: grey;
+            height: 100vh;
+            width: 100vw;
+            grid-template-columns: 40% 60%;
+        }
+
+        /* column1 */
+        .column1 {
+            background-color: #294B29;
+
+        }
+
+        /* column2 */
+        .column2 {
+            background-color: #50623A;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+
+        }
+
+        .row1 {
+
+            background-color: #508D69;
+        }
+
+        .row2 {
+            background-color: #2D9596;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+
+        }
+
+        .left {
+            background-color: #A3B763;
+
+        }
+
+        .right {
+            background-color: #2D9596;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        .rightupper {
+            background-color: #363062;
+
+        }
+
+        .rightlower {
+            background-color: #FA7070;
+
+        }
+
+        .row3 {
+
+            background-color: #9ADE7B;
+        }
+    </style>
+
+<body>
+    <!-- main -->
+    <div class="main">
+        <!-- column1 -->
+        <div class="column1"></div>
+        <!-- column2 -->
+        <div class="column2">
+            <!-- row1 -->
+            <div class="row1"></div>
+            <!-- row2 -->
+            <div class="row2">
+                <div class="left"></div>
+                <!--column4  -->
+                <div class="right">
+                    <div class="rightupper"></div>
+                    <div class="rightlower"></div>
+                </div>
+            </div>
+            <!-- row3 -->
+            <div class="row3"></div>
+
+        </div>
+
+    </div>
+</body>

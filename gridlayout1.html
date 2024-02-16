@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Layout1</title>
+    <style>
+        /* main */
+        .main {
+            display: grid;
+            background-color: grey;
+            height: 100vh;
+            width: 100vw;
+            grid-template-rows: 30% 30% 40%;
+
+        }
+
+        /* row1 */
+        .row1 {
+            background-color: blue;
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+        .column1 {
+            background-color: #070F2B;
+        }
+
+        .column2 {
+            background-color: #535C91;
+        }
+
+        /* row2 */
+        .row2 {
+            background-color: red;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .column3 {
+            background-color: #944E63;
+
+        }
+
+        .column4 {
+            background-color: #B47B84;
+
+        }
+
+        .column5 {
+
+            background-color: #CAA6A6;
+        }
+
+        /* row 3 */
+        .row3 {
+            background-color: green;
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+        .column6 {
+            background-color: #81689D;
+        }
+
+        .column7 {
+            background-color: #37B5B6;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- main -->
+    <div class="main">
+        <!-- row1 -->
+        <div class="row1">
+            <div class="column1"></div>
+            <div class="column2"></div>
+
+        </div>
+        <!-- row2 -->
+        <div class="row2">
+            <div class="column3"></div>
+            <div class="column4"></div>
+            <div class="column5"></div>
+        </div>
+        <!-- row3 -->
+        <div class="row3">
+            <div class="column6"></div>
+                <div class="column7"></div>
+            
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
