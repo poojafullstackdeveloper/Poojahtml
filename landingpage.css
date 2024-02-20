@@ -1,61 +1,113 @@
 /* main */
 .main {
     display: grid;
-    background-color: #FFBE98;
+    background-color: #B67352;
     height: 100vh;
     width: 100vw;
-   grid-template-rows: 20% 35% 10% 35%;
+    grid-template-rows: 20% 35% 10% 35%;
 }
-
+/* row1 */
 .row1 {
-    background-color:#176B87;}
-
+    background-color: #176B87;
+}
+/* row2 */
 .row2 {
     background-color: #720455;
+    height: 100%;
+    width: 100%;
 }
 
+/* row3 */
 
 .row3 {
     background-color: #638889;
 
 }
+/* row4 */
 
 .row4 {
-    background-color:#B67352;
+    background-color: #2D9596;
     display: grid;
     grid-template-rows: 1fr 1fr;
     padding-bottom: 20px;
-   
+
 }
+
 /* 1st row */
-.firstrow{
-    background-color:#2D9596;
-    display: grid;
-    grid-template-columns:20% 20% 20% 20%;
-    padding: 10px;
-    column-gap: 20px;
-   
-}
-/* 2nd row */
-.secondrow{
+.firstrow {
     background-color: #2D9596;
     display: grid;
-    grid-template-columns:20% 20% 20% 20%;
-   padding: 10px;
-   column-gap: 20px;
-   
-   
-} 
-.column1{
-    background-color:#9AD0C2;        
-} 
-   
-   
+    grid-template-columns: 20% 20% 20% 20%;
+    padding: 10px;
+    column-gap: 20px;
+
+}
+
+/* 2nd row */
+.secondrow {
+    background-color: #2D9596;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    width: 2100px;
+    padding: 10px;
+    column-gap: 20px;
+
+
+}
+/* column */
+.column1 {
+    background-color: #9AD0C2;
+}
 
 
 
-.p{
+
+
+.p {
     color: #720455;
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
+}
+
+.box-one {
+    height: 4%;
+    width: 2%;
+    color: #EE99C2;
+    display: inline-block;
+}
+
+.icon {
+    text-align: right;
+}
+
+.button {
+    background-color: #FDBF60;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: 100px;
+
+
+}
+
+.button1 {
+    background-color: #FDBF60;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: 100px;
+
+
+}
+.img{
+    height: 50px;
+    width: 50px;
 }
