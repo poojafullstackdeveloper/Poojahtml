@@ -70,14 +70,17 @@
 }
 
 .box-one {
-    height: 4%;
-    width: 2%;
-    color: #EE99C2;
-    display: inline-block;
+    height: 2vw;
+    width: 2vw;
+    margin-left: 90vw;
+   
+    
 }
 
 .icon {
-    text-align: right;
+    text-align:center;
+    height: 20px;
+    width: 20px;
 }
 
 .button {
