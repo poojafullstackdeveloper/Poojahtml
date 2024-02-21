@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <style>
+      .main {
+        display: flex;
+        width: 50vw;
+        height: 90vh;
+        flex-direction: column;
+        background-color: #1e1f22;
+        margin-left: 25vw;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      .display {
+        width: 100%;
+        height: 20%;
+        background-color: #1e1f22;
+      }
+      .buttons {
+        width: 100%;
+        height: 80%;
+        background-color: #fd8d0e;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      }
+
+      .single-button {
+        background-color: #fd8d0e;
+        border-style: solid;
+        border-width: 1px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .gray-button {
+        background-color: #313334;
+      }
+      .lightgray-button {
+        background-color: #6b6b6b;
+      }
+
+      .yellow-button {
+        background-color: #fd8d0e;
+      }
+
+      button {
+        color: white;
+        font-size: 22px;
+        width: 100%;
+        height: 100%;
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        height: 100%;
+        width: 100%;
+      }
+      .lastrow {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <!-- Display Screen -->
+      <div class="display"></div>
+      <div class="buttons">
+        <!-- First ROW -->
+        <div class="row">
+          <div class="single-button gray-button">
+            <button class="gray-button">AC</button>
+          </div>
+          <div class="single-button gray-button">
+            <button class="gray-button">+/-</button>
+          </div>
+          <div class="single-button gray-button">
+            <button class="gray-button">%</button>
+          </div>
+          <div class="single-button">
+            <button class="yellow-button">/</button>
+          </div>
+        </div>
+
+        <!-- Second ROW -->
+        <div class="row">
+          <div class="single-button lightgray-button">
+            <button class="lightgray-button">7</button>
+          </div>
+          <div class="single-button lightgray-button">
+            <button class="lightgray-button">8</button>
+          </div>
+          <div class="single-button lightgray-button">
+            <button class="lightgray-button">9</button>
+          </div>
+          <div class="single-button">
+            <button class="yellow-button">X</button>
+          </div>
+        </div>
+        <!-- Third ROW -->
+        <div class="row">
+          <div class="single-button lightgray-button">
+            <button class="lightgray-button">4</button>
+          </div>
+          <div class="single-button lightgray-button">
+            <button class="lightgray-button">5</button>
+          </div>
+          <div class="single-button lightgray-button">
+            <button class="lightgray-button">6</button>
+          </div>
+          <div class="single-button">
+            <button class="yellow-button">-</button>
+          </div>
+        </div>
+        <!-- Fourth ROW -->
+        <div class="row">
+          <div class="single-button lightgray-button">
+            <button class="lightgray-button">1</button>
+          </div>
+          <div class="single-button lightgray-button">
+            <button class="lightgray-button">2</button>
+          </div>
+          <div class="single-button lightgray-button">
+            <button class="lightgray-button">3</button>
+          </div>
+          <div class="single-button">
+            <button class="yellow-button">+</button>
+          </div>
+        </div>
+        <!-- Fifth ROW -->
+        <div class="lastrow">
+          <div class="single-button lightgray-button">
+            <button class="lightgray-button">0</button>
+          </div>
+          <div class="single-button lightgray-button">
+            <button class="lightgray-button">1</button>
+          </div>
+          <div class="single-button">
+            <button class="yellow-button">=</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
