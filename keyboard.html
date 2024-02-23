@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Keybard</title>
+    <style>
+        /* main */
+        .main{
+            display: grid;
+            height: 20vh;
+            width: 50vw;
+            background-color: gray;
+            border-style: solid 1px;
+            grid-template-columns: 100% 50%;
+            margin-top: 15%;
+            margin-left: 25%;
+            border-radius: 20px;
+            border-style: solid 1px;
+            border-color: black;
+
+        }
+        .column1{
+            background-color: black;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+            gap: 10px;
+        }
+        
+        .row{
+            background-color:black;
+        }
+
+       
+        
+        .column2{
+
+            background-color: yellow;
+            grid-template-columns: 1fr 1fr;
+            display: grid;
+
+        }
+        .column-left{
+            background-color: blue;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            display: grid;
+
+
+        }
+        .row1{
+            background-color: orangered;
+        }
+        .column-right{
+            background-color: brown;
+
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- main -->
+    <div class="main">
+        <!-- column1 -->
+        <div class="column1">
+            <!-- row 1-->
+            <div class="row">
+            <button>Esc</button>
+            <button>F1</button>
+            <button>F2</button>
+            <button>F3</button>
+            <button>F4</button>
+            <button>F5</button>
+            <button>F6</button>
+            <button>F7</button>
+            <button>F8</button>
+            <button>F9</button>
+            <button>F8</button>
+            <button>F9</button>
+            <button>F10</button>
+            <button>F11</button>
+            <button>F12</button>
+            </div>
+      <!-- row 2 -->
+            <div class="row">
+            <button>~</button>
+            <button>!<br>1</button>
+            <button>@<br>2</button>
+            <button>#<br>3</button>
+            <button>$<br>4</button>
+            <button>%<br>5</button>
+            <button>^<br>6</button>
+            <button>&<br>7</button>
+            <button>*<br>8</button>
+            <button>(<br>9</button>
+            <button>)<br>0</button>
+            <button>+<br>+</button>
+            <button>Backspace</button>
+            </div>
+            <!-- row3 -->
+
+            <div class="row">
+                <button>Tab</button>
+                <button>Q</button>
+                <button>W</button>
+                <button>E</button>
+                <button>R</button>
+                <button>T</button>
+                <button>Y</button>
+                <button>U</button>
+                <button>I</button>
+                <button>O</button>
+                <button>P</button>
+                <button>{<br>[</button>
+                <button>}<br>]</button>
+                <button>\<br>\</button>
+               
+
+            </div>
+            <!-- row 3 -->
+            <div class="row">
+            <button>Caps<br>Lock</button>
+            <button>A</button>
+            <button>S</button>
+            <button>D</button>
+            <button>F</button>
+            <button>G</button>
+            <button>H</button>
+            <button>J</button>
+            <button>K</button>
+            <button>L</button>
+            <button>:<br>;</button>
+            <button>"<br>'</button>
+            <button>Enter</button>
+            </div>
+
+            <!-- row4 -->
+            <div class="row">
+            <button>Shift</button>
+            <button>Z</button>
+            <button>X</button>
+            <button>C</button>
+            <button>V</button>
+            <button>B</button>
+            <button>N</button>
+            <button>M</button>
+            <button><<br>,</button>
+            <button>><br>.</button>
+            <button>?<br>./</button>
+            <button>Shift</button>
+            </div>
+
+
+            <div class="row">
+                <button>Ctrl</button>
+                <button>windows</button>
+                <button>Alt</button>
+                <button>Space </button>
+                <button>Alt</button>
+                <button>windows</button>
+                <button></button>
+                <button>Ctrl</button>
+              
+            </div>
+          
+        </div>
+        <!-- column2 -->
+        <div class="column2">
+            <div class="column-left">
+                <div class="row1">
+                    <button>PrintScreen</button>
+                    <button>ScollLock</button>
+                    <button>Pause<br>-</button>
+                </div>
+                <div class="row1"></div>
+                <div class="row1"></div>
+                <div class="row1"></div>
+                <div class="row1"></div>
+                
+ </div>
+            <div class="column-right"></div>
+        </div>
+    </div>
+</body>
+</html>
