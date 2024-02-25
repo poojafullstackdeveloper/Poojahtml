@@ -2,99 +2,118 @@
 <html>
 
 <head>
-    <title></title>
-    <style>
-         .main {
-            background-color: pink;
-            height: 30vw;
-            width: 30vw;
-            margin-left: 5%;
-            margin-top: 5%;
-        }
-        #display {
-            background-color: gray;
-            height: 20%;
-            width: 100%;
-            font-size: 20px;
-            border-radius: 25%;
-        }
+   <title></title>
+   <style>
+      .main {
+         background-color: pink;
+         height: 30vw;
+         width: 30vw;
+         margin-left: 5%;
+         margin-top: 5%;
+      }
 
-        .submit {
-            background-color: yellowgreen;
-            height: 60px;
-            width: 150px;
-            margin-left: 2%;
-            margin-top: 5%;
-        }
+      #display {
+         background-color: gray;
+         height: 20%;
+         width: 100%;
+         font-size: 20px;
+         border-radius: 25%;
+      }
 
+      .submit {
+         background-color: yellowgreen;
+         height: 60px;
+         width: 150px;
+         margin-left: 2%;
+         margin-top: 5%;
+      }
+   </style>
+   <script>
+      // sub
+
+      function displayFunction(presentOne, presentTwo) {
+         let collectedValue = sub(presentOne, presentTwo);
+         document.getElementById("display").innerHTML =
+            "The Total Amount of present is : " + collectedValue;
+      }
+
+
+      function sub(numberOne, numberTwo) {
+         let total = numberOne - numberTwo;
+         return total;
+      }
+      //   add
+
+      function displayFunction(presentOne, presentTwo) {
+         let collectedValue = add(presentOne, presentTwo);
+         document.getElementById("display").innerHTML =
+            "The Total Amount of present is : " + collectedValue;
+      }
+
+
+      function add(numberOne, numberTwo) {
+         let total = numberOne + numberTwo;
+         return total;
+      }
+      //   MUL
+
+      function displayFunction(presentOne, presentTwo) {
+         let collectedValue = mul(presentOne, presentTwo);
+         document.getElementById("display").innerHTML =
+            "The Total Amount of present is : " + collectedValue;
+      }
+
+
+      function mul(numberOne, numberTwo) {
+         let total = numberOne * numberTwo;
+         return total;
+      }
+
+      //   div
+      function displayFunction(presentOne, presentTwo) {
+         let collectedValue = div(presentOne, presentTwo);
+         document.getElementById("display").innerHTML =
+            "The Total Amount of present is : " + collectedValue;
+      }
+
+
+      function div(numberOne, numberTwo) {
+         let total = numberOne / numberTwo;
+         return total;
+      }
+      // add 3 numbers
        
-    </style>
-    <script>
-        
-        function displayFunction( presentOne, presentTwo) {
-           let collectedValue = sub(presentOne, presentTwo);
-            document.getElementById("display").innerHTML = 
-           "The Total Amount of present is : " + collectedValue;
-     }
+      function displayFunction(presentOne ,presentTwo ,presentthree){
+         let collectedValue = add(presentOne, presentTwo ,presentthree);
+         document.getElementById("display").innerHTML = "the prresnt value is :" + collectedValue;
 
-        function sub(numberOne, numberTwo) {
-           let total = numberOne - numberTwo;
-           return total;
-        }
-        function clearfunction() {
-          document.getElementById("display").innerHTML = "";
-        }
+      }
+      function add(numberOne , numberTwo ,numberthree) {
+         let total = numberOne + numberTwo + numberthree;
+         return total;
+         
+      }
+      //  clear
 
-        function displayFunction( presentOne, presentTwo) {
-           let collectedValue = add(presentOne, presentTwo);
-            document.getElementById("display").innerHTML = 
-           "The Total Amount of present is : " + collectedValue;
-     }
+      function clearfunction() {
+         document.getElementById("display").innerHTML = "";
+      }
 
-        function add(numberOne, numberTwo) {
-           let total = numberOne + numberTwo;
-           return total;
-        }
-        function clearfunction() {
-          document.getElementById("display").innerHTML = "";
-        }
 
-        function displayFunction( presentOne, presentTwo) {
-           let collectedValue = mul(presentOne, presentTwo);
-            document.getElementById("display").innerHTML = 
-           "The Total Amount of present is : " + collectedValue;
-     }
 
-        function mul(numberOne, numberTwo) {
-           let total = numberOne *numberTwo;
-           return total;
-        }
-        function clearfunction() {
-          document.getElementById("display").innerHTML = "";
-        }
 
-        function displayFunction( presentOne, presentTwo) {
-           let collectedValue = div(presentOne, presentTwo);
-            document.getElementById("display").innerHTML = 
-           "The Total Amount of present is : " + collectedValue;
-     }
 
-        function div(numberOne, numberTwo) {
-           let total = numberOne / numberTwo;
-           return total;
-        }
-        function clearfunction() {
-          document.getElementById("display").innerHTML = "";
-        }
 
-    </script>
+   </script>
 </head>
-<body>
-    <div class="main">
-        <h2 id="display"></h2>
-        <button class="submit" onclick="displayFunction (1500 ,10)">CLICK HERE</button>
 
-        <button class="submit" onclick="clearfunction()">CLEAR</button>
-    </div>
+<body>
+   <div class="main">
+      <h2 id="display"></h2>
+      <button class="submit" onclick="displayFunction (1500 ,10,10)">CLICK HERE</button>
+
+      <button class="submit" onclick="clearfunction()">CLEAR</button>
+   </div>
 </body>
+
 </html>
