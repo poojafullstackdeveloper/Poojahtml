@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Keyboard</title>
+    <style>
+        /* main */
+        .main {
+            height: 50vh;
+            width: 90vw;
+            background-color: aqua;
+            display: grid;
+            grid-template-columns: 70% 30%;
+            border-style: double 1px;
+            border-color: black;
+            margin-top:  25px;
+            margin-left: 25px;
+            border-radius: 25%;
+
+        }
+
+        .column1 {
+            background-color: gray;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+            gap: 10px;
+            ;
+        }
+
+        /* row */
+        .row {
+            background-color: yellow;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        }
+
+        .row1{
+            background-color: yellow;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr ;
+        }
+
+        .row2{
+
+            background-color: yellow;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+        }
+
+        .row3{
+            background-color: yellow;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr  ;
+        }
+
+        .row4{
+            background-color: yellow;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr ;
+
+        }
+        .row5{
+            background-color: yellow;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 4fr 1fr 1fr 1fr 1fr
+
+
+        }
+        
+
+
+        
+
+        
+        
+
+
+        .column2 {
+            background-color: gray;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            gap: 10px;
+        }
+
+        .row6{
+            background-color:black;
+            display: grid;
+          
+            grid-template-columns: 1fr 1fr 1fr 3fr;
+            gap: 10px;
+        }
+        
+        .row7{
+          
+            background-color: black;
+            display: grid; 
+        
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 10px;
+        }
+
+
+        .row8{
+          
+          background-color: black;
+          display: grid;
+      
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          gap: 10px;
+      }
+
+      .row9{
+          
+          background-color:black;
+          display: grid;
+      
+          grid-template-columns: 1fr 1fr 1fr 5fr;
+          gap: 10px;
+      }
+
+      .row10{
+          
+          background-color: black;
+          display: grid;
+      
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          gap: 10px;
+      }
+      
+      .row11{
+          
+          background-color: black;
+          display: grid;
+      
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          gap: 10px;
+      }
+
+
+      
+        
+        
+        button{
+            background-color: black;
+            color: white;
+         
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- main -->
+    <div class="main">
+        <!-- column1 -->
+        <div class="column1">
+            <div class="row">
+                <button>Esc</button>
+                <button>F1</button>
+                <button>F2</button>
+                <button>F3</button>
+                <button>F4</button>
+                <button>F5</button>
+                <button>F6</button>
+                <button>F7</button>
+                <button>F8</button>
+                <button>F9</button>
+                <button>F8</button>
+                <button>F9</button>
+                <button>F10</button>
+                <button>F11</button>
+                <button>F12</button>
+            </div>
+
+            <div class="row1">
+                <button>~</button>
+                <button>!<br>1</button>
+                <button>@<br>2</button>
+                <button>#<br>3</button>
+                <button>$<br>4</button>
+                <button>%<br>5</button>
+                <button>^<br>6</button>
+                <button>&<br>7</button>
+                <button>*<br>8</button>
+                <button>(<br>9</button>
+                <button>)<br>0</button>
+                <button>_<br>-</button>
+                <button>+<br>=</button>
+                <button>Backspace</button>
+            </div>
+
+            <div class="row2">
+                <button>Tab</button>
+                <button>Q</button>
+                <button>W</button>
+                <button>E</button>
+                <button>R</button>
+                <button>T</button>
+                <button>Y</button>
+                <button>U</button>
+                <button>I</button>
+                <button>O</button>
+                <button>P</button>
+                <button>{<br>[</button>
+                <button>}<br>]</button>
+                <button>|<br>\</button>
+            </div>
+
+            <div class="row3">
+                <button>Caps<br>Lock</button>
+                <button>A</button>
+                <button>S</button>
+                <button>D</button>
+                <button>F</button>
+                <button>G</button>
+                <button>H</button>
+                <button>J</button>
+                <button>K</button>
+                <button>L</button>
+                <button>:<br>;</button>
+                <button>"<br>'</button>
+                <button>Enter</button>
+            </div>
+
+            <div class="row4">
+                <button>Shift</button>
+                <button>Z</button>
+                <button>X</button>
+                <button>C</button>
+                <button>V</button>
+                <button>B</button>
+                <button>N</button>
+                <button>M</button>
+                <button><<br>,</button>
+                <button>><br>.</button>
+                <button>?<br>./</button>
+                <button>Shift</button>
+            </div>
+
+            <div class="row5">
+                <button>Ctrl</button>
+                <button>windows</button>
+                <button>Alt</button>
+                <button>Space </button>
+                <button>Alt</button>
+                <button>windows</button>
+                <button></button>
+                <button>Ctrl</button>
+            </div>
+        </div>
+
+        <!-- column2 -->
+        <div class="column2">
+            <div class="row6">
+                <button>num<br>lock</button>
+                <button>/</button>
+                <button>*</button>
+                <button>-</button>
+            </div>
+          <div class="row7">
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>+</button>
+          </div>
+            
+            <div class="row8">
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>%</button>
+
+            </div>
+            
+            <div class="row10">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>@</button>
+            </div>
+            
+            <div class="row11">
+                <button>0</button>
+                <button>.</button>
+                <button>Enter</button>
+                <button>Backspace</button>
+
+            </div>
+            
+
+
+        </div>
+
+
+    </div>
+</body>
