@@ -30,6 +30,9 @@
       }
    </style>
    <script>
+         
+
+     
       // sub
 
       function displayFunction(presentOne, presentTwo) {
@@ -44,6 +47,8 @@
          return total;
       }
       //   add
+       
+     
 
       function displayFunction(presentOne, presentTwo) {
          let collectedValue = add(presentOne, presentTwo);
@@ -95,62 +100,86 @@
          
       }
       //  clear
+       
 
       function clearfunction() {
+         total=0;
          document.getElementById("display").innerHTML = "";
       }
+
+      
+         //   In these case we are using global varible for total
+      let total=0;
+
       function add() {
-         let first= document.getElementById("number-one").value;
-         let second=document.getElementById("number-two").value;
-           let total = Number(first) + Number(second);
+        let x =Number(document.getElementById("number-one").value);
+         let y =Number(document.getElementById("number-two").value);
+          total =  total + (x) + (y) ;
 
          document.getElementById("display").innerHTML =
             "The Total  is : " + total;
-
+s
          
       }
       function sub(){
-         let first= document.getElementById("number-one").value;
-         let second=document.getElementById("number-two").value;
-           let total = Number(first) - Number(second);
+         let x= Number(document.getElementById("number-one").value);
+         let y=Number(document.getElementById("number-two").value);
+            total = total - x - y;
 
          document.getElementById("display").innerHTML =
             "The Total  is : " + total;
 
 
       }
+
 
       function mul(){
-         let first= document.getElementById("number-one").value;
-         let second=document.getElementById("number-two").value;
-           let total = Number(first) * Number(second);
+         let x= Number(document.getElementById("number-one").value);
+         let y=Number(document.getElementById("number-two").value);
+            total = total + x * y;
 
          document.getElementById("display").innerHTML =
             "The Total  is : " + total;
 
 
       }
+
       function div(){
-         let first= document.getElementById("number-one").value;
-         let second=document.getElementById("number-two").value;
-           let total = Number(first) / Number(second);
+         let x= Number(document.getElementById("number-one").value);
+         let y=Number(document.getElementById("number-two").value);
+            total = total + x / y;
 
          document.getElementById("display").innerHTML =
             "The Total  is : " + total;
 
 
       }
+
+
+  
+
+     
+
+      
 
       function per(){
-         let first= document.getElementById("number-one").value;
-         let second=document.getElementById("number-two").value;
-           let total = (Number(first) / Number(second))*100;
+         let x= Number(document.getElementById("number-one").value);
+         let y=Number(document.getElementById("number-two").value);
+            total = ((x) / (y))*100;
 
          document.getElementById("display").innerHTML =
-            "The Total  is : " + total;
+            "The Total  i : " + total;
 
 
       }
+
+    
+
+    
+
+      
+     
+      
 
 
       
@@ -167,15 +196,15 @@
 <body>
    <div class="main">
       <h2 id="display"></h2>
-      <input type="text" value="0" id="number-one" style="width:20%;  height: 10%;   text-align: center;">
-      <input type="text" value="0" id="number-two"  style="width:20%;   height:10%;  text-align:center;">
+      <input type="text" value="" id="number-one" style="width:20%;  height: 10%;   text-align: center;">
+      <input type="text" value="" id="number-two"  style="width:20%;   height:10%;  text-align:center;">
       <br>
       <br>
        
-      <button class="submit" onclick="add()">add</button>
-      <button class="submit" onclick="sub()">sub</button>
-      <button class="submit" onclick="mul()">mul</button>
-      <button class="submit" onclick="div()">div</button>
+      <button class="submit" onclick="add()">Add</button>
+      <button class="submit" onclick="sub()">Sub</button>
+      <button class="submit" onclick="mul()">Mul</button>
+      <button class="submit" onclick="div()">Div</button>
       <button class="submit" onclick="per()">Percentage</button>
       
       
@@ -183,7 +212,7 @@
 
 
       <button class="submit" onclick="clearfunction()">CLEAR</button>
-   </div>
+   </div>    
 </body>
 
 </html>
