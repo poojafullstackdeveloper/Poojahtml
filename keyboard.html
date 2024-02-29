@@ -5,63 +5,66 @@
     <style>
         /* main */
         .main {
-            height: 50vh;
+            height: 400px;
             width: 90vw;
             background-color: aqua;
             display: grid;
-            grid-template-columns: 70% 30%;
+            grid-template-columns: 3fr 1fr;
             border-style: double 1px;
             border-color: black;
-            margin-top: 25px;
+            margin-top: 20px;
             margin-left: 25px;
-           
+
 
         }
 
         .column1 {
             background-color: gray;
             display: grid;
+            height: 400px;
+            width: 100%;
             grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-            gap: 10px;
+            gap: 0px;
             ;
         }
 
         /* row */
         .row {
-            background-color:black;
+            background-color: black;
             display: grid;
+            grid-template-rows: 1fr;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
             margin-top: 5px;
         }
 
-        .row1 {
-            background-color:black;
+        .row-one {
+            background-color: black;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
         }
 
-        .row2 {
+        .row-two {
 
-            background-color:black;
+            background-color: black;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         }
 
-        .row3 {
+        .row-three {
             background-color: black;
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
         }
 
-        .row4 {
-            background-color:black;
+        .row-four {
+            background-color: black;
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
 
         }
 
-        .row5 {
-            background-color:black;
+        .row-five {
+            background-color: black;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 4fr 1fr 1fr 1fr 1fr;
             margin-bottom: 5px;
@@ -78,42 +81,46 @@
         .column2 {
             background-color: gray;
             display: grid;
+            grid-template-rows: 15% 82%;
+            gap: 5px;
+            height: 400px;
+            width: 100%;
+        }
+
+        .row-six {
+            background-color: none;
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-rows: 50px;
+
+
+        }
+
+        .row-seven {
+            background-color: rgb(114, 54, 54);
+            display: grid;
             grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-            gap: 10px;
-        }
-
-
-
-        .row6 {
-
-            background-color: gray;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr ;
-            gap: 10px;
-        }
-
-        .row7 {
-
-            background-color: gray;
-            display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
-           
-            gap: 10px;
-            
+            height: 100%;
+            width: 100%;
         }
-        
-        
 
+        .row-sp {
+            display: grid;
+            grid-row: span 2;
 
-
-
-
-
+        }
 
         button {
             background-color: black;
             color: white;
             border-radius: 5%;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+
+
 
         }
     </style>
@@ -142,7 +149,7 @@
                 <button>F12</button>
             </div>
 
-            <div class="row1">
+            <div class="row-one">
                 <button>~</button>
                 <button>!<br>1</button>
                 <button>@<br>2</button>
@@ -159,7 +166,7 @@
                 <button>Backspace</button>
             </div>
 
-            <div class="row2">
+            <div class="row-two">
                 <button>Tab</button>
                 <button>Q</button>
                 <button>W</button>
@@ -176,7 +183,7 @@
                 <button>|<br>\</button>
             </div>
 
-            <div class="row3">
+            <div class="row-three">
                 <button>Caps<br>Lock</button>
                 <button>A</button>
                 <button>S</button>
@@ -192,7 +199,7 @@
                 <button>Enter</button>
             </div>
 
-            <div class="row4">
+            <div class="row-four">
                 <button>Shift</button>
                 <button>Z</button>
                 <button>X</button>
@@ -209,7 +216,7 @@
                 <button>Shift</button>
             </div>
 
-            <div class="row5">
+            <div class="row-five">
                 <button>Ctrl</button>
                 <button>windows</button>
                 <button>Alt</button>
@@ -223,46 +230,36 @@
 
         <!-- column2 -->
         <div class="column2">
-            <div class="row6">
-                <button>num<br>lock</button>
+            <div class="row-six">
+                <p style="color: black; font-size: 30px;text-align: right;"><sup>logitech</sup></p>
+            </div>
+            <div class="row-seven">
+                <button>num lock</button>
                 <button>/</button>
                 <button>*</button>
                 <button>-</button>
-            </div>
-            <div class="row7">
+
+
                 <button>7</button>
                 <button>8</button>
                 <button>9</button>
-                 <button>+</button>
-            
-            </div>
+                <button class="row-sp">+</button>
 
-            <div class="row7">
                 <button>4</button>
                 <button>5</button>
                 <button>6</button>
-                <button>%</button>
 
-            </div>
-
-            <div class="row7">
                 <button>1</button>
                 <button>2</button>
                 <button>3</button>
-                <button>@</button>
-            </div>
+                <button class="row-sp">Enter</button>
 
-            <div class="row7">
-                <button>0</button>
+                <button style="display: grid; grid-column: span 2;">0</button>
                 <button>.</button>
-                <button>Enter</button>
-                <button>Backspace</button>
-
             </div>
-
-
-
         </div>
+
+
 
 
     </div>
