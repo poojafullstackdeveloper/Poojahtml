@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Even/Odd/Vote Chekers</title>
+    <style>
+        /* main */
+        .main {
+            height: 70vh;
+            width: 70vw;
+            background-color: #E1AFD1;
+        }
+
+        /* display */
+        #display {
+            background-color: #50727B;
+            height: 30%;
+            width: 90%;
+            margin-top: 10px;
+            margin-left: 30px;
+            border-style: groove;
+            border-color: black;
+            border-radius: 15px;
+        }
+
+        /* button */
+        .submit {
+            height: 20%;
+            width: 30%;
+            background-color: #B47B84;
+            border-style: groove;
+            margin-left: 10px;
+        }
+    </style>
+    <script>
+
+
+        // Even/Odd
+        function check() {
+
+        }
+
+        // Vote
+        function vote() {
+            let no;
+            no = Number(document.getElementById("age").value);
+
+
+
+            if (no < 18) {
+                alert("Under 18");
+            }
+            else {
+                alert("You are Adult");
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <!--main  -->
+    <div class="main">
+        <!-- display -->
+        <h1 id="display"></h1>
+        <input type="number" value="" id="age"
+            style="background-color: #ECB159;  height: 15%; width: 30%; border-style: groove;   margin-left: 50px;">
+        <input type="number" value="" id="age"
+            style="background-color:#ECB159;height: 15%; width: 30%; border-style: groove;   margin-left: 30px;"><br>
+        <br>
+
+        <!-- <button class="submit" onclick="check()">Check Even/Odd</button>
+        <button class="submit" onclick="voteChekers()">Check Vote</button>
+        <button class="submit" onclick="showresult()">Check Equals</button> -->
+
+
+        Enter your age:<input id="age"><br />
+        <button onclick="verify()">Click me</button>
+
+</body>
+
+</html>
