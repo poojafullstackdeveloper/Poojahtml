@@ -10,6 +10,7 @@
             height: 70vh;
             width: 70vw;
             background-color: #E1AFD1;
+            
         }
 
         /* display */
@@ -22,6 +23,7 @@
             border-style: groove;
             border-color: black;
             border-radius: 15px;
+            text-align: center;
         }
 
         /* button */
@@ -34,34 +36,48 @@
         }
     </style>
     <script>
-
+        let num;
+       
 
         // Even/Odd
-        function check() {
+        function evenoddCheckers() {
+            num = document.getElementById("evenodd").value;
 
+            if (num%2 ==0) {
+                document.getElementById("display").innerHTML = "The number is even";
+            }
+
+            else {
+                document.getElementById("display").innerHTML = " The number is odd";
+            }
         }
 
         // Vote
-        function vote() {
-            let no;
-            no = Number(document.getElementById("age").value);
+        function voteCheckers() {
 
 
+            num = document.getElementById("age").value;
 
-            if (no < 18) {
-                alert("Under 18");
+            if (num >= 18) {
+
+                document.getElementById("display").innerHTML = " The person eligible for vote";
             }
+
             else {
-                alert("You are Adult");
+                document.getElementById("display").innerHTML = "The person not eligible for vote";
             }
+
+
 
         }
+        // clear
 
+        function clearfunction() {
 
+            document.getElementById("display").innerHTML = "";
+        }
 
-
-
-
+        
 
 
 
@@ -74,19 +90,19 @@
     <div class="main">
         <!-- display -->
         <h1 id="display"></h1>
-        <input type="number" value="" id="age"
+        <input type="text" value="" id="evenodd"
             style="background-color: #ECB159;  height: 15%; width: 30%; border-style: groove;   margin-left: 50px;">
-        <input type="number" value="" id="age"
+        <input type="text" value="" id="age"
             style="background-color:#ECB159;height: 15%; width: 30%; border-style: groove;   margin-left: 30px;"><br>
         <br>
 
-        <!-- <button class="submit" onclick="check()">Check Even/Odd</button>
-        <button class="submit" onclick="voteChekers()">Check Vote</button>
-        <button class="submit" onclick="showresult()">Check Equals</button> -->
+        <button class="submit" onclick="evenoddCheckers()">Check Even/Odd</button>
+        <button class="submit" onclick="voteCheckers()">Check Vote</button>
+
+        <button class="submit" onclick="clearfunction()">Clear</button>
 
 
-        Enter your age:<input id="age"><br />
-        <button onclick="verify()">Click me</button>
+
 
 </body>
 
