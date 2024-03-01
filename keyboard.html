@@ -92,7 +92,9 @@
             height: 100%;
             width: 100%;
             display: grid;
-            grid-template-rows: 50px;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            margin-top: 3px;
 
 
         }
@@ -196,7 +198,7 @@
                 <button>L</button>
                 <button>:<br>;</button>
                 <button>"<br>'</button>
-                <button>Enter</button>
+                <button> ↩ enter</button>
             </div>
 
             <div class="row-four">
@@ -218,20 +220,26 @@
 
             <div class="row-five">
                 <button>Ctrl</button>
-                <button>windows</button>
+                <button><b>⌘</b></button>
                 <button>Alt</button>
                 <button>Space </button>
                 <button>Alt</button>
-                <button>windows</button>
-                <button></button>
-                <button>Ctrl</button>
+                <button>ctrl</button>
+                <button>◄</button>
+                <button>►</button>
+
             </div>
         </div>
 
         <!-- column2 -->
         <div class="column2">
             <div class="row-six">
-                <p style="color: black; font-size: 30px;text-align: right;"><sup>logitech</sup></p>
+                <button>home</button>
+                <button>end</button>
+                <button><small>pg up</small></button>
+                <button><small>pg dn</small></button>
+
+
             </div>
             <div class="row-seven">
                 <button>num lock</button>
@@ -240,18 +248,18 @@
                 <button>-</button>
 
 
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
+                <button>7<sup>home</sup></button>
+                <button>8 <br> ↑</button>
+                <button>9<sup>pg pu</sup></button>
                 <button class="row-sp">+</button>
 
-                <button>4</button>
+                <button>4 <br>←</button>
                 <button>5</button>
-                <button>6</button>
+                <button>6 <br>→</button>
 
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
+                <button>1<sup>end</button>
+                <button>2 <br> ↓</button>
+                <button>3<sup>pg dn</button>
                 <button class="row-sp">Enter</button>
 
                 <button style="display: grid; grid-column: span 2;">0</button>

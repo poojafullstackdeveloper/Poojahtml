@@ -95,54 +95,59 @@
         let action = 0;
         let lastresult = 0;
 
+
         //   numberpass
 
         function numberTypes(passnumbers) {
             displayString = displayString + passnumbers.toString();
             document.getElementById("display").innerHTML = displayString;
 
-            if (passnumbers == 7) {
-                document.getElementById("display").style.backgroundColor = "yellow";
-            }
+            // if (passnumbers == 7) {
+            //     document.getElementById("display").style.backgroundColor = "yellow";
+            // }
 
-            else if (passnumbers == 8) {
-                document.getElementById("display").style.backgroundColor = "red";
-            }
+            // else if (passnumbers == 8) {
+            //     document.getElementById("display").style.backgroundColor = "red";
+            // }
 
-            else if (passnumbers == 9) {
-                document.getElementById("display").style.backgroundColor = "green";
-            }
+            // else if (passnumbers == 9) {
+            //     document.getElementById("display").style.backgroundColor = "green";
+            // }
 
 
-            else {
-                document.getElementById("display").style.backgroundColor = "black";
-            }
+            // else {
+            //     document.getElementById("display").style.backgroundColor = "black";
+            // }
 
         }
 
         // showresult
 
         function showresult() {
-            total = total + Number(displayString);
+
+
+            if (action == 1) {
+                total = total + Number(displayString);
+
+            }
+            else if (action == 2) {
+                total = total - Number(displayString);
+            }
+            else if (action == 3) {
+                total = total * Number(displayString);
+            }
+            else if (action == 4) {
+                total = total  / Number(displayString);
+            }
+
             displayString = total;
             document.getElementById("display").innerHTML = displayString;
 
-            if (action == 1) {
-                document.getElementById("display").innerHTML = displayString;
-            }
-            else if (action == 2) {
-                document.getElementById("display").innerHTML = displayString;
-
-
-            }
-            else {
-                document.getElementById("display").innerHTML = displayString;
-
-
-            }
-
 
         }
+
+
+
         // backspace
 
         function backspace() {
@@ -180,8 +185,9 @@
         // mul
 
         function mul() {
-            total = total * Number(displayString);
+            total = Number(displayString);
             displayString = "";
+            action = 3;
             document.getElementById("display").innerHTML = displayString;
 
 
@@ -190,6 +196,7 @@
             total = Number(displayString);
             displayString = "";
             action = 4;
+
             document.getElementById("display").innerHTML = displayString;
 
 
