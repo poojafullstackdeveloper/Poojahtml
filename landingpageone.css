@@ -20,7 +20,9 @@
 
 .third-section {
     display: grid;
-    background-color:lightskyblue;
+   /* background-color:lightskyblue; */
+    width: 96.5%;
+    height: 200PX;
 
 }
 
@@ -135,7 +137,7 @@
     }
     
     .middle-section {
-        background-color: lightseagreen;
+        background-color: white;
     
     }
     
