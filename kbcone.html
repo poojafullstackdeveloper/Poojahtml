@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>EVEN ODD</title>
+  <style>
+    .container {
+      width: 80vw;
+      height: 80vh;
+      background-color: lightgray;
+    }
+
+    .display {
+      width: 100%;
+      height: 20%;
+      background-color: #124076;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .display-text {
+      color: white;
+      font-size: 22px;
+    }
+
+    .custom-button {
+      margin-top: 20px;
+      margin-left: 20%;
+      background-color: yellowgreen;
+      color: black;
+      width: 60%;
+      height: 44px;
+      font-size: 18px;
+    }
+
+    .input-section {
+      width: 100%;
+      margin-top: 10px;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .input-no {
+      width: 40%;
+      height: 44px;
+      margin-left: 5%;
+    }
+  </style>
+  <script>
+    let questionNumber = 0;
+
+    function questionOne() {
+      document.getElementById("display-text").innerHTML =
+        "What was a name of Katol?";
+      document.getElementById("answer-one").innerHTML = "Nagpur";
+      document.getElementById("answer-two").innerHTML = "Narsingi";
+      document.getElementById("answer-three").innerHTML = "Ayodhya";
+      document.getElementById("answer-four").innerHTML = "Kuntalapur";
+    }
+
+    function questionTwo() {
+      document.getElementById("display-text").innerHTML =
+        "Auto ko katol mein kya kaheta hain?";
+      document.getElementById("answer-one").innerHTML = "Riksha";
+      document.getElementById("answer-two").innerHTML = "Rakhsha";
+      document.getElementById("answer-three").innerHTML = "Car";
+      document.getElementById("answer-four").innerHTML = "Thela";
+    }
+
+    function question(question) {
+      document.getElementById("container").style.backgroundColor = "#124076";
+
+      if (question == 1) {
+        questionNumber = 1;
+        questionOne();
+      } else if (question == 2) {
+        questionNumber = 2;
+        questionTwo();
+      } else {
+        document.getElementById("display-text").innerHTML =
+          "APP JEET GAYE 1 CRORE RUPAYEE";
+      }
+    }
+
+    function answer(givenAnswer) {
+      if (questionNumber == 1) {
+        if (givenAnswer == 4) {
+          answerOne(true, 2);
+        } else {
+          answerOne(false, 0);
+        }
+      } else if (questionNumber == 2) {
+        if (givenAnswer == 1) {
+          answerOne(true, 3);
+        } else {
+          answerOne(false, 0);
+        }
+      }
+    }
+
+    function answerOne(correctAnswer, nextQuestion) {
+      if (correctAnswer) {
+        document.getElementById("display-text").innerHTML =
+          "Sahi Jabab, Ha ha ha";
+        document.getElementById("container").style.backgroundColor =
+          "#26BE32";
+        setTimeout(() => {
+          question(nextQuestion);
+        }, 3000);
+      } else {
+        document.getElementById("display-text").innerHTML =
+          "SSSS, Galat Jawab.";
+        document.getElementById("container").style.backgroundColor =
+          "#FF0000";
+        setTimeout(() => {
+          startScreen();
+        }, 2000);
+      }
+    }
+
+    function dostart() {
+      document.getElementById("main-body").hidden = false;
+      document.getElementById("play-button").hidden = true;
+      question(1);
+    }
+
+    function startScreen() {
+      document.getElementById("main-body").hidden = true;
+      document.getElementById("play-button").hidden = false;
+    }
+  </script>
+</head>
+
+<body>
+  <button id="play-button" onclick="dostart()">LET"S START</button>
+  <div class="container" id="main-body" hidden="true">
+    <div class="display" id="container">
+      
+      <h1 id="display-text" class="display-text"></h1>
+    </div>
+    <button class="custom-button" id="answer-one" onclick="answer(1)"></button>
+    <button class="custom-button" id="answer-two" onclick="answer(2)"></button>
+    <button class="custom-button" id="answer-three" onclick="answer(3)"></button>
+    <button class="custom-button" id="answer-four" onclick="answer(4)"></button>
+  </div>
+</body>
+
+</html>
