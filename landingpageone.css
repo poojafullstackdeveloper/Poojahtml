@@ -67,6 +67,8 @@
     list-style: none;
     margin-left: 20%;
     margin-right: 5px;
+    margin: 10px;
+    padding: 10px;
    
 
 }
@@ -104,4 +106,12 @@
     float: right;
     margin-top: 10px;
     margin-right: 10px;
+}
+
+.leftnav{
+    float: left;
+}
+
+.rightNav {
+    text-align: right;
 }
