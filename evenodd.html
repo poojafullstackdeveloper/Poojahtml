@@ -36,12 +36,12 @@
         }
     </style>
     <script>
-        let num;
        
+       let num;
 
         // Even/Odd
         function evenoddCheckers() {
-            num = document.getElementById("evenodd").value;
+         num = document.getElementById("evenodd").value;
 
             if (num%2 ==0) {
                 document.getElementById("display").innerHTML = "The number is even";
@@ -56,9 +56,9 @@
         function voteCheckers() {
 
 
-            num = document.getElementById("age").value;
+         num = document.getElementById("age").value;
 
-            if (num >= 18) {
+            if (num>= 18) {
 
                 document.getElementById("display").innerHTML = " The person eligible for vote";
             }
@@ -70,6 +70,20 @@
 
 
         }
+        // IS Equal
+        function isEqualTo() {
+        let x = document.getElementById("evenodd").value;
+        let y = document.getElementById("age").value;
+        if (x == y) {
+          document.getElementById("display-text").innerHTML =
+            "BOTH NUMBERS ARE EQUAL";
+        } else {
+          document.getElementById("display-text").innerHTML =
+            "BOTH NUMBERS ARE NOT EQUAL";
+        }
+      }
+
+
         // clear
 
         function clearfunction() {
@@ -98,6 +112,8 @@
 
         <button class="submit" onclick="evenoddCheckers()">Check Even/Odd</button>
         <button class="submit" onclick="voteCheckers()">Check Vote</button>
+        <button class="submit" onclick="isEqualTo()">Check Equalto</button>
+
 
         <button class="submit" onclick="clearfunction()">Clear</button>
 
