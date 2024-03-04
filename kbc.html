@@ -1,87 +1,459 @@
+]
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
     <title>KBC</title>
-    <!-- style -->
     <style>
-        /* main*/
-        .main {
+        /* main */
+        .container {
             height: 100vh;
             width: 100vw;
-            background-color: lightcoral;
-            display: flex;
-            flex-direction: column;
-
         }
 
-        /* display */
         .display {
-            background-color: lightgrey;
-            height: 30%;
-            width: 90%;
-            margin-top: 1%;
-            margin-right: 5%;
-            margin-left: 5%;
+            width: 80%;
+            display: flex;
+            margin-left: 10%;
+            justify-content: center;
+            align-items: center;
+
 
         }
 
-        #display-text {
-            font-size: 20px;
+        .display-text {
+            color: white;
+            font-size: 30px;
             text-align: center;
         }
 
-        /* display-text */
+        .custom-button {
 
-        button {
+            background-color: white;
+            color: black;
             height: 100px;
-            width: 700px;
-            background-color: lightseagreen;
-            margin-left: 20%;
-            gap: 5%;
+            width: 500px;
+            font-size: 18px;
+            margin-left: 15%;
+            margin-top: 2%;
+            border-radius: 20%;
+        }
+
+        .input-section {
+            width: 100%;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .input-no {
+            width: 40%;
+            height: 44px;
+            margin-left: 5%;
+        }
+
+
+
+
+
+
+
+
+
+
+        /* body */
+        .body {
+            background-image: url("data:image/jpeg;base64,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");
+
+            background-repeat: no-repeat;
+            background-size: cover;
         }
     </style>
     <script>
         let questionNumber = 0;
-        // questionNumber
+        //    function question
+        //    one
         function questionOne() {
-            document.getElementById("display").innerHTML = "1.Current Railway Minister of India is"
+            document.getElementById("display-text").innerHTML =
+                "1. Besides Sachin Tendulkar, who is the only other Indian cricketer to have scored over 13,000 runs in test cricket?";
+            document.getElementById("answer-one").innerHTML = " Virat Kohli";
+            document.getElementById("answer-two").innerHTML = " Sunil Gavaskar";
+            document.getElementById("answer-three").innerHTML = " VVS laxman";
+            document.getElementById("answer-four").innerHTML = " Rahul Dravid";
+        }
+        //   two
+        function questionTwo() {
+            document.getElementById("display-text").innerHTML =
+                "2. Ranthambore, Sariska and Keoladeo Ghana are all names of what?";
+            document.getElementById("answer-one").innerHTML = " National Parks ";
+            document.getElementById("answer-two").innerHTML = " Goosebumps";
+            document.getElementById("answer-three").innerHTML = "Mountains ";
+            document.getElementById("answer-four").innerHTML = " Rivers ";
+        }
+        //   three
 
-            document.getElementById("answer-one").innerHTML = "Mamta Banraji";
-            document.getElementById("answer-two").innerHTML = "Ram Vilash";
-            document.getElementById("answer-three").innerHTML = "Ashwini Vaishnaw";
-            document.getElementById("answer-four").innerHTML = "Piyush Goyal";
+        function questionThree() {
+            document.getElementById("display-text").innerHTML =
+                " India’s official entry to Oscars 2021, ” Jallikattu” is, a film in which language?";
+            document.getElementById("answer-one").innerHTML = " Hindi ";
+            document.getElementById("answer-two").innerHTML = "Punjabi ";
+            document.getElementById("answer-three").innerHTML = "Kannada ";
+            document.getElementById("answer-four").innerHTML = " Malayalam";
+        }
+        //   four
+        function questionFour() {
+            document.getElementById("display-text").innerHTML =
+                "4. In terms of production, which of these is the largest train coach manufacturing unit in the world? ";
+            document.getElementById("answer-one").innerHTML = "Integral Coach Factory, Bangalore ";
+            document.getElementById("answer-two").innerHTML = "Integral Coach Factory, Mumbai ";
+            document.getElementById("answer-three").innerHTML = " Integral Coach Factory, Chennai ";
+            document.getElementById("answer-four").innerHTML = ". Integral Coach Factory, Kolkata";
+        }
+
+        //   five
+        function questionFive() {
+            document.getElementById("display-text").innerHTML =
+                "5. In 2020, Louise Gluck won the Nobel Prize in which category?";
+            document.getElementById("answer-one").innerHTML = "Music";
+            document.getElementById("answer-two").innerHTML = " Sports ";
+            document.getElementById("answer-three").innerHTML = "Literature";
+            document.getElementById("answer-four").innerHTML = " Dance";
+        }
+        //   six
+        function questionSix() {
+            document.getElementById("display-text").innerHTML =
+                "6. Which of the following companies was originally started as a loom manufacturing unit in 1909?";
+            document.getElementById("answer-one").innerHTML = "Suzuki";
+            document.getElementById("answer-two").innerHTML = " CEAT ";
+            document.getElementById("answer-three").innerHTML = "Honda";
+            document.getElementById("answer-four").innerHTML = " Mercedes ";
+        }
+        //   seven
+        function questionSeven() {
+            document.getElementById("display-text").innerHTML =
+                "7. In 1994, who became the winner of the first-ever Filmfare R D Burman Award for New Music Talent?";
+            document.getElementById("answer-one").innerHTML = "Udit Narayan";
+            document.getElementById("answer-two").innerHTML = "A. R. Rahman";
+            document.getElementById("answer-three").innerHTML = "Lata Mangeshkar";
+            document.getElementById("answer-four").innerHTML = " Raj Burman";
+        }
+
+        //  eight
+        function questionEight() {
+            document.getElementById("display-text").innerHTML =
+                "8. What colour did Lord Shiva’s throat turn into when he drank the deadly poison during Samudra Manthan?";
+            document.getElementById("answer-one").innerHTML = " Red";
+            document.getElementById("answer-two").innerHTML = "Yellow";
+            document.getElementById("answer-three").innerHTML = "Blue";
+            document.getElementById("answer-four").innerHTML = "Black ";
+        }
+        //   nine
+        function questionNine() {
+            document.getElementById("display-text").innerHTML =
+                "9. What is the profession of Kabir in the film Kabir Singh?";
+            document.getElementById("answer-one").innerHTML = "Engineer";
+
+            document.getElementById("answer-two").innerHTML = " Cricketor";
+            document.getElementById("answer-three").innerHTML = " Athlete";
+            document.getElementById("answer-four").innerHTML = "Doctor";
 
         }
-        // dotstart
-        // function dostart() {
-        //     document.getElementById("main-body").hidden = false;
-        //     document.getElementById("play-button").hidden = true;
-        //     question(1);
-        // }
+        //   ten
+        function questionTen() {
+            document.getElementById("display-text").innerHTML =
+                "10. Which of these national parks is named after the river that flows through the park?";
+            document.getElementById("answer-one").innerHTML = "Pench";
+
+            document.getElementById("answer-two").innerHTML = "Tadoba";
+            document.getElementById("answer-three").innerHTML = "Vrindavan";
+            document.getElementById("answer-four").innerHTML = " Wildera";
+
+        }
+        //   eleven
+        function questionEleven() {
+            document.getElementById("display-text").innerHTML =
+                "11. Which state is the largest producer of sugarcane in India?";
+            document.getElementById("answer-one").innerHTML = " Maharashtra";
+
+            document.getElementById("answer-two").innerHTML = " Karnataka";
+            document.getElementById("answer-three").innerHTML = "Madhya Pradesh";
+            document.getElementById("answer-four").innerHTML = "Uttar Pradesh";
+
+        }
+        //   twelve
+        function questionTwelve() {
+            document.getElementById("display-text").innerHTML =
+                "12. Which of these colors when mixed with red will produce the color orange?";
+            document.getElementById("answer-one").innerHTML = "Violet";
+
+            document.getElementById("answer-two").innerHTML = "Green";
+            document.getElementById("answer-three").innerHTML = "Orange";
+            document.getElementById("answer-four").innerHTML = "Yellow";
+
+        }
+        //   thirteen
+        function questionThriteen() {
+            document.getElementById("display-text").innerHTML =
+                " Which of these is an ashram set up by Gandhiji set up near Wardha in Maharashtra?";
+            document.getElementById("answer-one").innerHTML = " Sri Aurobindo Ashram";
+
+            document.getElementById("answer-two").innerHTML = "Parmarth Niketan Ashram";
+            document.getElementById("answer-three").innerHTML = "Sevagram";
+            document.getElementById("answer-four").innerHTML = "Sivananda Ashram";
+
+        }
+        //  fourteen
+        function questionFourteen() {
+            document.getElementById("display-text").innerHTML =
+                "14. Who of the following personalities is not married to a sports person?";
+            document.getElementById("answer-one").innerHTML = " Anushka Sharma";
+
+            document.getElementById("answer-two").innerHTML = "Sakshi Singh Rawat";
+            document.getElementById("answer-three").innerHTML = " Mahesh Bhupathi";
+            document.getElementById("answer-four").innerHTML = "Sharmila Tagore";
+
+        }
+        //Fifteen
+        function questionFifteen() {
+            document.getElementById("display-text").innerHTML =
+                "15. Which part of the plant absorbs water and nutrients from the soil?";
+            document.getElementById("answer-one").innerHTML = "Stem";
+
+            document.getElementById("answer-two").innerHTML = " Buds";
+            document.getElementById("answer-three").innerHTML = "Leafs";
+            document.getElementById("answer-four").innerHTML = "Root";
+
+        }
+        //   function question question
+
+        function question(question) {
+            document.getElementById("container").style.backgroundColor = "#124076";
+
+            if (question == 1) {
+                questionNumber = 1;
+                questionOne();
+            } else if (question == 2) {
+                questionNumber = 2;
+                questionTwo();
+            } else if (question == 3) {
+                questionNumber = 3;
+                questionThree();
+            }
+            else if (question == 4) {
+                questionNumber = 4;
+                questionFour();
+            }
+            else if (question == 5) {
+                questionNumber = 5;
+                questionFive();
+            }
+            else if (question == 6) {
+                questionNumber = 6;
+                questionSix();
+            }
+            else if (question == 7) {
+                questionNumber = 7;
+                questionSeven();
+            }
+            else if (question == 8) {
+                questionNumber = 8;
+                questionEight();
+            }
+            else if (question == 9) {
+                questionNumber = 9;
+                questionNine();
+            }
+            else if (question == 10) {
+                questionNumber = 10;
+                questionTen();
+            }
+            else if (question == 11) {
+                questionNumber = 11;
+                questionEleven();
+            }
+            else if (question == 12) {
+                questionNumber = 12;
+                questionTwelve();
+            }
+            else if (question == 13) {
+                questionNumber = 13;
+                questionThriteen();
+            }
+            else if (question == 14) {
+                questionNumber = 14;
+                questionFourteen();
+            }
+            else if (question == 15) {
+                questionNumber = 15;
+                questionFifteen();
+            }
+            else {
+                document.getElementById("display-text").innerHTML =
+                    "APP JEET GAYE 1 CRORE RUPAYEE";
+            }
+        }
+        //   function answer answer
+
+        function answer(givenAnswer) {
+            if (questionNumber == 1) {
+                if (givenAnswer == 4) {
+                    answerOne(true, 2);
+                } else {
+                    answerOne(false, 0);
+                }
+            } else if (questionNumber == 2) {
+                if (givenAnswer == 1) {
+                    answerOne(true, 3);
+                } else {
+                    answerOne(false, 0);
+                }
+            }
+            else if (questionNumber == 3) {
+                if (givenAnswer == 4) {
+                    answerOne(true, 4);
+                } else {
+                    answerOne(false, 0);
+                }
+            }
+            else if (questionNumber == 4) {
+                if (givenAnswer == 3) {
+                    answerOne(true, 5);
+                } else {
+                    answerOne(false, 0);
+                }
+            }
+            else if (questionNumber == 5) {
+                if (givenAnswer == 3) {
+                    answerOne(true, 6);
+                } else {
+                    answerOne(false, 0);
+                }
+            }
+            else if (questionNumber == 6) {
+                if (givenAnswer == 1) {
+                    answerOne(true, 7);
+                } else {
+                    answerOne(false, 0);
+                }
+            }
+            else if (questionNumber == 7) {
+                if (givenAnswer == 2) {
+                    answerOne(true, 8);
+                } else {
+                    answerOne(false, 0);
+                }
+            }
+            else if (questionNumber == 8) {
+                if (givenAnswer == 3) {
+                    answerOne(true, 9);
+                } else {
+                    answerOne(false, 0);
+                }
+            }
+            else if (questionNumber == 9) {
+                if (givenAnswer == 4) {
+                    answerOne(true, 10);
+                } else {
+                    answerOne(false, 0);
+                }
+            }
+            else if (questionNumber == 10) {
+                if (givenAnswer == 1) {
+                    answerOne(true, 11);
+                } else {
+                    answerOne(false, 0);
+                }
+            }
+            else if (questionNumber == 11) {
+                if (givenAnswer == 4) {
+                    answerOne(true, 12);
+                } else {
+                    answerOne(false, 0);
+                }
+            }
+            else if (questionNumber == 12) {
+                if (givenAnswer == 4) {
+                    answerOne(true, 13);
+                } else {
+                    answerOne(false, 0);
+                }
+            }
+            else if (questionNumber == 13) {
+                if (givenAnswer == 3) {
+                    answerOne(true, 14);
+                } else {
+                    answerOne(false, 0);
+                }
+            }
+            else if (questionNumber == 14) {
+                if (givenAnswer == 4) {
+                    answerOne(true, 15);
+                } else {
+                    answerOne(false, 0);
+                }
+            }
+            else if (questionNumber == 15) {
+                if (givenAnswer == 4) {
+                    answerOne(true, 0);
+                } else {
+                    answerOne(false, 0);
+                }
+            }
+
+        }
+        function answerOne(correctAnswer, nextQuestion) {
+            if (correctAnswer) {
+                document.getElementById("display-text").innerHTML =
+                    "Correct Answer";
+                document.getElementById("container").style.backgroundColor =
+                    "orange";
+                setTimeout(() => {
+                    question(nextQuestion);
+                }, 3000);
+            } else {
+                document.getElementById("display-text").innerHTML =
+                    "wrong Answer.";
+                document.getElementById("container").style.backgroundColor =
+                    "brown";
+                setTimeout(() => {
+                    startScreen();
+                }, 2000);
+            }
+        }
+
+        function dostart() {
+            document.getElementById("main-body").hidden = false;
+            document.getElementById("play-button").hidden = true;
+            question(1);
+        }
+
+        function startScreen() {
+            document.getElementById("main-body").hidden = true;
+            document.getElementById("play-button").hidden = false;
+        }
+
+
+
+
     </script>
+
 </head>
 
-<body>
-    <!-- <button id="play-button" onclick="dostart()">LET"S START</button> -->
-    <!-- main -->
-    <div class="main">
-        <h1 class="display" id="display"></h1>
-        <!-- button -->
-        <button class="button" id="answer-one" onclick="answer(1)"></button>
-        <button class="button" id="answer-two" onclick="answer(2)"></button>
-        <button class="button" id="answer-three" onclick="answer(3)"></button>
-        <button class="button" id="answer-four" onclick="answer(4)"></button>
+<body class="body">
+    <h1 class="display display-text"></h1>
+    <button id="play-button" onclick="dostart()">LET"S START</button>
+    <div class="container" id="main-body" hidden="true">
+        <div class="display" id="container">
+            <h1 id="display-text" class="display-text"></h1>
+        </div>
+        <button class="custom-button" id="answer-one" onclick="answer(1)"></button>
+        <button class="custom-button" id="answer-two" onclick="answer(2)"></button>
+        <button class="custom-button" id="answer-three" onclick="answer(3)"></button>
+        <button class="custom-button" id="answer-four" onclick="answer(4)"></button>
     </div>
 
 
-
 </body>
-
-
-
-
-
 
 </html>
