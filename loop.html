@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Loops</title>
+    <!-- style -->
+    <style>
+        .main-container {
+            
+            height: 90vh;
+            width: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 10px;
+            margin-top: 10px;
+
+        }
+        .display{
+            background-color:lightcoral;
+
+            height: 35vh;
+            width: 100%;
+            text-align: center;
+            color: blue;
+            font-size: 15px;
+        }
+        .second-container{
+             background-color: lightgrey;
+             height: 35vh;
+            width: 100%;
+    
+        }
+        .input-section{
+            height: 50px;
+            width: 500px;
+            margin-left: 30px;
+            margin-top: 30px;
+            
+        }
+        .button{
+            height: 50px;
+            width: 500px;
+            background-color: yellowgreen;
+            margin-left: 30px;
+            margin-top: 30px;
+        
+            
+        }
+    </style>
+
+    <!-- script -->
+    <script>
+    // function displayText() {
+    //     let x = document.getElementById("display-text").value;
+    //     let output = "";
+    //     while (x > 0) {
+    //       output = output + "HELLO" + "<br/>";
+    //       console.log("Output value is ", output);
+    //       x = x - 1;
+    //     }
+    //     document.getElementById("display").innerHTML = output;
+    //   }
+
+    //   2nd type
+    let x = document.getElementById("display-text").value;
+        let output = "";
+        let y = 1;
+
+        while (y <= 10) {
+          let result = y * x;
+          output = output  + x + " * " + y + " = " + result;
+          output = output + "<br/>";
+          y = y + 1;
+        }
+      function clearText() {
+        document.getElementById("display").innerHTML = "";
+      }
+    </script>
+</head>
+
+<body>
+    <!-- main-container -->
+    <div class="main-container">
+        <div class="display" id="display"></div>
+        <!-- second-container -->
+        <div class="second-container">
+            <input type="number" id="display-text" class="input-section">
+            <button class="button"  onclick="displayText()">Click Here</button>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
