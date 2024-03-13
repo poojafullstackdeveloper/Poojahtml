@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Lotry</title>
+    <!-- style -->
+    <style>
+        .main-container {
+
+            height: 90vh;
+            width: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 30px;
+            margin-top: 10px;
+
+        }
+
+        .display {
+            background-color: lightseagreen;
+
+            height: 35vh;
+            width: 100%;
+        }
+
+        .second-container {
+            background-color: lightgrey;
+            height: 35vh;
+            width: 100%;
+
+        }
+
+        .input-section {
+            height: 50px;
+            width: 500px;
+            margin-left: 40px;
+            border-radius: 20%;
+            margin-top: 2%;
+
+
+        }
+
+        .button {
+            height: 50px;
+            width: 500px;
+            background-color: #124076;
+            margin-left: 40px;
+            margin-top: 30px;
+            border-radius: 20%;
+        }
+
+        /* loder */
+        .loader {
+            border: 16px solid #f3f3f3;
+            /* Light grey */
+            border-top: 16px solid darkblue;
+            /* Blue */
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-left: 60%;
+            margin-top: 5%; 
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+  <script>
+
+    
+  </script>
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+    <!-- main-container -->
+    <div class="main-container">
+        <div class="display" id="display">
+            <!-- loder -->
+        <div class="loader"></div>
+        </div>
+
+        <!-- second-container -->
+        <div class="second-container">
+            <input type="number" id="display-text" class="input-section" placeholder="Enter Your Number">
+            <input type="number" id="display-text" class="input-section" placeholder="Coins">
+
+
+            <button class="button" onmouseenter="displayText()">Play</button>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
