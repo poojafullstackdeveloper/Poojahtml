@@ -6,33 +6,52 @@
     <title>Even/Odd/Vote Chekers</title>
     <style>
         /* main */
-        .main {
-            height: 70vh;
-            width: 70vw;
-            background-color: #E1AFD1;
+        .main-container {
+            height: 80vh;
+            width: 50vw;
+            background-color:#ECB159;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 10%;
+            border-radius: 10%;
+
+        }
+        /* display */
+        .display {
+            background-color: gray;
+            height: 30vh;
+            width: 80%;
+            margin-left: 45px;
+            padding: 20px;
+            border-style: groove;
+            text-align: center;
+            border-radius: 10%;
 
         }
 
-        /* display */
-        #display {
-            background-color: #50727B;
-            height: 30%;
-            width: 90%;
-            margin-top: 10px;
-            margin-left: 30px;
-            border-style: groove;
-            border-color: black;
-            border-radius: 15px;
-            text-align: center;
+
+         /* input section */
+         .input-section {
+            height: 50px;
+            width: 550px;
+            background-color: #EABE6C;
+            margin-left: 10%;
+            margin-top: 3%;
+
         }
 
         /* button */
-        .submit {
-            height: 20%;
-            width: 30%;
-            background-color: #B47B84;
-            border-style: groove;
-            margin-left: 10px;
+
+        button {
+            height: 50px;
+            width: 550px;
+            background-color: #00224D;
+            margin-left: 10%;
+            margin-top: 3%;
+            text-align: center;
+            color: white;
+
         }
     </style>
     <script>
@@ -102,16 +121,13 @@
 
 <body>
     <!--main  -->
-    <div class="main">
+     <!-- main container -->`
+     <div class="main-container">
         <!-- display -->
-        <h1 id="display"></h1>
-        <input type="text" value="" id="evenodd" placeholder="Entr the number"
-            style="background-color: #ECB159;  height: 15%; width: 30%; border-style: groove;   margin-left: 50px;">
-        <input type="text" value="" id="age" placeholder="Entr the age"
-            style="background-color:#ECB159;height: 15%; width: 30%; border-style: groove;   margin-left: 30px;"><br>
-        <br>
-
-        <button class="submit" onclick="evenoddCheckers()">Check Even/Odd</button>
+        <div class="display" id="display"></div>
+        <input class="input-section" id="evenodd"type="number" placeholder="ENTER THE NUMBER">
+        <input class="input-section" id="age"type="number" placeholder="ENTER THE AGE">
+         <button class="submit" onclick="evenoddCheckers()">Check Even/Odd</button>
         <button class="submit" onclick="voteCheckers()">Check Vote</button>
         <button class="submit" onclick="isEqualTo()">Check Equal</button>
         <button class="submit" onclick="clearfunction()">Clear</button>

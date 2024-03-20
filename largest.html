@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Natural Number </title>
+    <title>Largest/Smallest Number </title>
     <style>
+        /* main container */
         .main-container {
             height: 80vh;
             width: 50vw;
@@ -14,7 +15,6 @@
             flex-direction: column;
             justify-content: center;
             margin-left: 10%;
-            border-radius: 10%;
 
         }
 
@@ -22,17 +22,13 @@
 
         .display {
             background-color: gray;
-            height: 30vh;
+            height: 20vh;
             width: 80%;
             margin-left: 45px;
             padding: 20px;
             border-style: groove;
             text-align: center;
-            border-radius: 10%;
-
         }
-
-
 
         /* input section */
         .input-section {
@@ -47,7 +43,6 @@
         /* button */
 
         button {
-
             height: 50px;
             width: 550px;
             background-color: #00224D;
@@ -59,22 +54,24 @@
         }
     </style>
     <script>
-        function naturalFunction() {
-            let x = document.getElementById("number").value;
-
+        function largestFunction() {
+            let x = document.getElementById("numone").value;
+            let y = document.getElementById("numtwo").value;
+            let z = document.getElementById("numthree").value;
             let output;
-            if (x > 0) {
-                output = "THE NUMBER IS POSITIVE"
-
+            if (x > y && x >z) {
+                output = x;
+                document.getElementById("display").innerHTML = "THE NUMBER IS LAREGE" +output;
             }
-            else if (x < 0) {
-                output = "THE NUMBER IS NEGATIVE"
+            else if (y > z && y > x) {
+                output=y;
+                document.getElementById("display").innerHTML = "THE NUMBER IS LAREGE"+output;
             }
             else {
-                output = "THE NUMBER IS ZERO"
-
+                output = z;
+                document.getElementById("display").innerHTML = "THE NUMBER IS LAREGE"+output;
             }
-            document.getElementById("display").innerHTML = output;
+
 
         }
         //   clear function
@@ -93,9 +90,10 @@
     <div class="main-container">
         <!-- display -->
         <div class="display" id="display"></div>
-
-        <input class="input-section" type="number" id="number">
-        <button onclick="naturalFunction()">Click here</button>
+        <input class="input-section" type="number" id="numone">
+        <input class="input-section" type="number" id="numtwo">
+        <input class="input-section" type="number" id="numthree">
+        <button onclick="largestFunction()">Click here</button>
         <button onclick="clearfunction()">Clear</button>
 
 

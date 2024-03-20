@@ -42,14 +42,7 @@
 
         }
 
-        .line {
-            height: 5px;
-            width: 95%;
-            background-color: white;
-            margin-left: 3px;
-            margin-top: 3px;
-            
-        }
+        
 
         /* button */
         button {
@@ -71,11 +64,12 @@
         }
     </style>
     <script>
-        let 
+           let audio = new Audio("./kbc.mp3");
+                    audio.play();
    
         // play track
         function forwardTrack(){
-            let x = document.getElementById("myAudio");
+            audio = document.getElementById("myAudio");
           
 
         }
@@ -97,10 +91,7 @@
         <div class="inner-conatiner">
             <!-- display -->
             <div class="display"></div>
-            <div class="line"></div>
-            <audio controls   id="myAudio"  src="./Audio/file_example_MP3_700KB.mp3"></audio>
-                
-            </audio>
+           
             
             <!-- button -->
             <button onclick="forwardTrack()"><img class="img"
