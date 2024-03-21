@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display number</title>
+    <style>
+        /* main container */
+        .main-container {
+            height: 80vh;
+            width: 50vw;
+            background-color: #007F73;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 10%;
+            border-radius: 10%;
+
+        }
+
+        /* display */
+
+        .display {
+            background-color: gray;
+            height: 30vh;
+            width: 80%;
+            margin-left: 45px;
+            padding: 20px;
+            border-style: groove;
+            text-align: center;
+            border-radius: 10%;
+
+        }
+
+        /* input section */
+        .input-section {
+            height: 50px;
+            width: 550px;
+            background-color: #EABE6C;
+            margin-left: 10%;
+            margin-top: 3%;
+
+        }
+
+        /* button */
+        button {
+
+            height: 50px;
+            width: 550px;
+            background-color: #00224D;
+            margin-left: 10%;
+            margin-top: 3%;
+            text-align: center;
+            color: white;
+
+        }
+    </style>
+    <script>
+        function numberFunction() {
+            //  print 1 to 10 number and not print 5
+            // let x = 1;
+
+
+            // while (x <= 10) {
+            //     if(x!=5){
+            //         console.log(x);
+            //     }
+
+            //     x++;
+            // }
+            // let x=1;
+            // while (x <= 30) {
+            //     // if(x%2==0){
+            //         // x=x+2;
+            //         console.log(x*3);
+            //     // }
+
+            //     x++;
+            // }
+            let x = prompt("ENTER A NUMBER");
+            x = Number(x);
+            let y = 1;
+            let print = "";
+            while (y < 11) {
+                print=print+ x + "*" + y + "=" + x*y;
+               print= print + "</br>";
+                console.log(x + "*" + y + "=", x*y); 
+                document.getElementById("display").innerHTML = print;
+                y++;
+
+
+            }
+         
+
+            // let x = 10;
+
+            // while (x >= 1) {
+
+            //     console.log(x);
+
+            //     x--
+            // }
+
+        }
+
+        function clearfunction() {
+            document.getElementById("display").innerHTML = "";
+
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+    <!-- main container -->`
+    <div class="main-container">
+        <!-- display -->
+        <div class="display" id="display"></div>
+
+        <input class="input-section" type="text" id="demo">
+        <button onclick="numberFunction()">Click here</button>
+        <button onclick="clearfunction()">Clear</button>
+
+
+    </div>
+</body>
+
+</html>
