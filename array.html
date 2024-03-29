@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,30 +57,42 @@
 
         }
     </style>
-    <script>
-        function arrayFunction() {
-            let input = [];
+     <script>
+        // function arrayFunction() {
+        //     let input = [];
 
-            for (let i = 0; i < 5; i++) {
-                let enter = prompt("Enter the no");
-                input.push(enter);
+        //     for (let i = 0; i < 5; i++) {
+        //         let enter = prompt("Enter the no");
+        //         input.push(enter);
 
 
 
+        //     }
+
+
+        //     let inputs = [11, 22, 33];
+        //     inputs = [11, 22, 33, 44, 55, 66, 77, 88, 99, 111, 222, 333, 444];
+        //     let index = 0;
+        //     // let output;
+        //     while (index < input.length) {
+        //         let output = "Arrray At" + index + "Is" + input[index];
+
+        //         console.log(output);
+        //         index++;
+        //     }
+
+        // } 
+
+        function reverseFunction(){
+            // Input 5 NUMBER
+            let inputs=[];
+            for( let i=0; i<3;i++){
+                inputs[i]=prompt("Enter a number"+i+"index=");
             }
-
-
-            let inputs = [11, 22, 33];
-            inputs = [11, 22, 33, 44, 55, 66, 77, 88, 99, 111, 222, 333, 444];
-            let index = 0;
-            // let output;
-            while (index < input.length) {
-                let output = "Arrray At" + index + "Is" + input[index];
-
-                console.log(output);
-                index++;
+            // Output in revesr order
+            for(let x=2;x>=0;x--){
+                console.log("The output is",inputs[x]);
             }
-
         }
 
 
@@ -100,7 +113,7 @@
         <div class="display" id="display"></div>
 
         <input class="input-section" type="text" id="demo">
-        <button onclick=" arrayFunction()">Click here</button>
+        <button onclick="  reverseFunction()">Click here</button>
         <button onclick="clearfunction()">Clear</button>
 
 

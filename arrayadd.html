@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -60,33 +61,26 @@
         function arrayFunction() {
 
 
+let inputs=[]
+
+            for (let i = 0; i < 5; i++) {
+                    let enter = Number(prompt("enter number here"))
+                    inputs.push(enter);
 
 
 
-            let inputs = [10, 20, 30, 40, 50];
-            let add = 0;
-            let index=0;
+                }
 
-            
-            for (let i = 0; i < inputs.length; i++) {
-
-                add += inputs[i];
-                let output = inputs[i] + inputs[index];
-               
-
-
-            }
-
-
-            console.log(add) ;
-
-
-            
-
-
+                let index = 0;
+                total = 0;
+                while (index < inputs.length) {
+                    let output = "ARRARY AT" + index + "IS" + "=" + inputs[index];
+                    total += inputs[index]
+                    console.log(output);
+                    index++;
+                }
+                console.log("total is ", total)
         }
-
-
         function clearfunction() {
             document.getElementById("display").innerHTML = "";
 
