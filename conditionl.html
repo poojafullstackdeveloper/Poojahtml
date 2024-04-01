@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If-else Practise </title>
+    <style>
+        /* main container */
+        .main-container {
+            height: 80vh;
+            width: 50vw;
+            background-color: #007F73;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 10%;
+            border-radius: 10%;
+
+        }
+
+        /* display */
+
+        .display {
+            background-color: gray;
+            height: 30vh;
+            width: 80%;
+            margin-left: 45px;
+            padding: 20px;
+            border-style: groove;
+            text-align: center;
+            border-radius: 10%;
+
+        }
+
+        /* input section */
+        .input-section {
+            height: 10%;
+            width: 30%;
+            background-color: #EABE6C;
+            margin-left: 10%;
+            margin-top: 3%;
+
+        }
+
+        /* button */
+
+        button {
+            height: 10%;
+            width: 35%;
+            background-color: #00224D;
+            margin-left: 10%;
+            margin-top: 3%;
+            text-align: center;
+            color: white;
+
+        }
+    </style>
+    <script>
+        //1] Write a program that determines whether a given number is positive or negative.
+        function numbertypes() {
+            let num = document.getElementById("number").value;
+            if (num >= 0) {
+                document.getElementById("display").innerHTML = "THE NUMBER ARE POSITIVE";
+            }
+            else {
+                document.getElementById("display").innerHTML = "THE NUMBER ARE NEGATIVE";
+
+            }
+        }
+        // 2]Write a program that checks if a number is even or odd.
+        function evenoddCheckers() {
+            let x = document.getElementById("number").value;
+            if (x % 2 == 0) {
+                document.getElementById("display").innerHTML = "THE NUMBER ARE EVEN";
+            }
+            else {
+                document.getElementById("display").innerHTML = "THE NUMBER ARE ODD";
+            }
+        }
+        //   3]Write a program to determine the greater of two numbers.
+        function greaterNumber() {
+            let a = document.getElementById("number").value;
+            let b = document.getElementById("numberone").value;
+            let c = document.getElementById("numbertwo").value;
+            let output;
+            if (a > b && a > c) {
+                output = a;
+
+            }
+            if (b > c && b > a) {
+                output = b;
+
+
+            }
+            else {
+                output = c;
+
+
+            }
+            document.getElementById("display").innerHTML = "THE NUMBER IS LARGEST is =" + output;
+        }
+        // 4]Write a program that transforms a numerical grade to a letter grade (e.g grade 10 should display “A”).
+        function gradeFunction() {
+            let d = prompt(document.getElementById("number").value);
+            if (d == 10) {
+                document.getElementById("display").innerHTML = "GRADE A"
+
+            }
+           
+            else {
+                document.getElementById("display").innerHTML = "GRADE B"
+            }
+        }
+        function age(){
+            let age= prompt(document.getElementById("number").value);
+            if(ErrorEvent){
+
+            }
+
+        }
+
+
+
+
+        function clearfunction() {
+            document.getElementById("display").innerHTML = "";
+
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+    <!-- main container -->`
+    <div class="main-container">
+        <!-- display -->
+        <div class="display" id="display"></div>
+        <input class="input-section" type="number" id="number">
+        <input class="input-section" type="number" id="numberone">
+        <input class="input-section" type="number" id="numbertwo">
+
+
+
+        <button onclick="numbertypes()">+/- Number</button>
+        <button onclick="evenoddCheckers()">EvenoddCheckers</button>
+        <button onclick="greaterNumber()">GreaterNumber</button>
+        <button onclick="gradeFunction()">GreadeNumber</button>
+
+        <button onclick="clearfunction()">Clear</button>
+
+
+    </div>
+</body>
+
+</html>

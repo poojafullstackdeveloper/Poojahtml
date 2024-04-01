@@ -10,48 +10,49 @@
         .main-container {
             height: 1600px;
             width: 1600px;
-            background-color:wheat;
+            background-color: wheat;
             display: flex;
             justify-content: center;
 
         }
 
-        .input-section {
-            height: 70px;
-            width: 600px;
-            background-color: lightseagreen;
-            border-radius: 15%;
-            margin-left: 20%;
-        }
 
-        h1 {
-            font-size: 35px;
-            color: darkblue;
-            text-align: center;
-            margin-left: 30%;
-
-
-
+        #search {
+            padding: 8px;
+            font-size: 16px;
+            border: 2px solid black;
+            border-radius: 5px;
         }
     </style>
     <script>
-        let studentArray = ["POOJA","SURAJ","NIRAV","ANIL","SEEMA","AKASH","ATUL","NEHA","JAYA","NIKITA","PRIYA","TEJAS"];
-        function studentFunction(){
-            let x=0;
-            let output="";
-             let input=document.getElementById("inputs").value;
-             while(x<=student.length){
-                if(student[x]=input){
-                    output="Student Are Found";
-                    break                           
+        let student = ["POOJA", "SURAJ", "NIRAV", "ANIL", "SEEMA", "AKASH", "ATUL", "NEHA", "JAYA", "NIKITA", "PRIYA", "TEJAS"];
+        function studentFunction() {
+            let input = document.getElementById("search").value;
 
+
+            let x = 0;
+            let output;
+            while (x < student.length) {
+
+
+                if (student[x]=input) {
+
+                    output = "student are found";
+
+                    x++;
                 }
-                x++;3
-                console.log(input);
-             }
+                if (student[x]=input) {
+
+                    output = "student are found";
+                }
+
+                else {
+                    output = "student are not found";
+                }
+            }
         }
-    </script>
-</head>q
+    </script> 
+</head>
 
 <body>
     <!-- main-container -->
@@ -59,8 +60,10 @@
 
         <div>
             <h1> ENJOY PROGRAMMING</h1>
-            <input class="input-section" id="inputs" type="search" placeholder="Student List">
-            <button onclick ="studentFunction()"></button>
+            <input type="text" name="search" id="search" placeholder="Search">
+            <button onclick=" studentFunction()">Search</button>
+            <div class="display" id="display"></div>
+
         </div>
     </div>
 
