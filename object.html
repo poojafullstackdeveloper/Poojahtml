@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+    <style>
+        /* main container */
+        .main-container {
+            height: 80vh;
+            width: 50vw;
+            background-color: #007F73;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 10%;
+            border-radius: 10%;
+
+        }
+
+        /* display */
+
+        .display {
+            background-color: gray;
+            height: 30vh;
+            width: 80%;
+            margin-left: 45px;
+            padding: 20px;
+            border-style: groove;
+            text-align: center;
+            border-radius: 10%;
+
+        }
+
+        /* input section */
+        .input-section {
+            height: 50px;
+            width: 550px;
+            background-color: #EABE6C;
+            margin-left: 10%;
+            margin-top: 3%;
+
+        }
+
+        /* button */
+
+        button {
+            height: 50px;
+            width: 550px;
+            background-color: #00224D;
+            margin-left: 10%;
+            margin-top: 3%;
+            text-align: center;
+            color: white;
+
+        }
+    </style>
+    <script>
+        // function arithmatic() {
+        //     let student = { firstName: "Pooja", lastName: "Barokar", rollNo: "121" };
+        //     console.log(student.firstName, student.lastName, student.rollNo);
+        //     document.getElementById("display").innerHTML = student.firstName, student.lastName, student.rollNo;
+        // }
+        function operationFunction() {
+            let student = {};
+            student["firstName"] = "POOJA";
+            student["lastName"] = prompt("ENTER A LAST NUMBER");
+            console.log(student.firstName, student.lastName);
+        }
+        function dataFunction() {
+            let arraystudent = [];
+            let student = {};
+            let i = 0;
+            while (i < 3) {
+                student["firstName"] = prompt("ENTER A FIRST NUMBER");
+                student["lastName"] = prompt("ENTER A LAST NUMBER");
+                arraystudent.push(student);
+                i++;
+
+            }
+
+            let j = 0;
+            while (j < arraystudent.length) {
+                let a = arraystudent[j];
+              
+                j++;
+                console.log("STUDENT DATA", a.firstName + " " + a.lastName);
+            }
+
+
+        }
+
+        function clearfunction() {
+            document.getElementById("display").innerHTML = "";
+
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+    <!-- main container -->`
+    <div class="main-container">
+        <!-- display -->
+        <div class="display" id="display"></div>
+        <input class="input-section" type="number" id="number">
+        <button onclick="arithmatic()">Click here</button>
+        <button onclick="operationFunction()">Click here</button>
+        <button onclick="dataFunction()">Click here</button>
+
+
+        <button onclick="clearfunction()">Clear</button>
+
+
+    </div>
+</body>
+
+</html>
