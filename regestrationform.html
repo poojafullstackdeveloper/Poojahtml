@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGESTRATION FORM</title>
+
+
+    <style>
+        /* main-container */
+        .main-container {
+            height: 100vh;
+            width: 100vw;
+            background-color: #BED7DC;
+
+        }
+
+        /* tab */
+        .tab {
+            height: 10%;
+            width: 100%;
+            background-color: #BED7DC;
+
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        /* start button */
+        .start-button {
+            height: 70%;
+            width: 100%;
+            background-color: #FFC94A;
+            color: black;
+            margin-left:2%;
+            margin-right: 2%;
+            font-size: 30px;
+            border-radius: 30%;
+            
+        }
+        .heading {
+            font: 30px;
+            color:black;
+            text-align: center;
+        }
+    </style>
+    <!-- Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- main-conatainer -->
+    <div class="main-container">
+        <!-- tab -->
+        <div id="input" class="tab">
+          
+                <button class="start-button" onclick="entryFunction()">ENTRY FORM</button>
+                <button class="start-button" onclick="listFunction()">LIST</button><br>
+           
+
+        </div>
+        <!-- FORM -->
+        <form>
+            <fieldset>
+                <h1 class="heading">ADMISSION FORM</h1>
+                <br>
+                <!-- First Name -->
+                <label>FIRST NAME:</label>
+                <input type="text" id="fname" name="fname" placeholder="ENTER FIRST NAME"><br />
+                <br>
+                <!-- Last name -->
+                <label>LAST NAME:</label>
+                <input type="text" id="lname" name="lname" placeholder="ENTER LAST NAME"><br />
+                <br>
+                <!-- Gender -->
+                <label>GENDER:</label>
+                <div class="input-button" id="gender"> <input class="input-button" type="radio" id="male"
+                        name="male">MALE
+                    <input class="input-button" type="radio" id="female" name="female">FEMALE
+                </div>
+                <br>
+                <!-- Education  -->
+                <label>EDUCATION:</label>
+                <select name="education" id="education">
+                    <optgroup label="DEGREE">Proficient
+                        <option value="BE">BE</option>
+                        <option value="BSC">BSC</option>
+                        <option value="MSA">MSA</option>
+                        <option value="HSC">HSC</option>
+                        <option value="SSC">SSC</option>
+                    </optgroup>
+                </select>
+                <br>
+                <!-- Contact Number -->
+                <label>CONTACT NO.:</label>
+                <input type="tel" id="phone" name="phone"><br />
+                <br>
+                <!-- Address -->
+                <label>ADDRESS:</label>
+
+                <input type="text" id="address" name="address"><br>
+                <br>
+                
+                <!-- Email -->
+                <label>EMAIL ID:</label>
+                <input type="email" id="email" name="email" placeholder="abd@gmail.com"><br />
+                <br />
+                <!-- DOB -->
+                <label>DOB</label>
+                <input type="date" id="birthday" name="birthday"><br />
+               
+               
+               
+                <!-- button -->
+                <button type="submit" onclick="dataFunction()">SUBMIT</button>
+                <button type="reset">CLOSE</button>
+            </fieldset>
+        </form>
+    </div>
+
+</body>
+
+</html>
