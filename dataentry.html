@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- tittle -->
+    <title>Student informartion</title>
+    <!-- external style -->
+    <link href="dataentry.css" rel="stylesheet" />
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Mate+SC&display=swap" rel="stylesheet">
+</head>
+<script>
+    let currentCount = 1;
+    let student = [];
+    let students = ["<tr></tr>"];
+
+    // data entry function
+    function formDisplay() {
+        console.log("formDisplay");
+        document.getElementById("page-One").hidden = false;
+        document.getElementById("page-Two").hidden = true;
+    }
+
+    // inputing data
+    function showFunction() {
+        console.log("inputData");
+        currentCount++;
+        let information = {};
+        // inputs
+        information["firstName"] = document.getElementById("first-name").value;
+        information["lastName"] = document.getElementById("last-name").value;
+        information["contactNo"] = document.getElementById("contact-no").value;
+        information["birth"] = document.getElementById("birth-date").value;
+        information["email"] = document.getElementById("email-id").value;
+        // information["education"] = document.getElementById("edu-details").value;
+        information["address"] = document.getElementById("address-l").value;
+
+        //    let firstName = document.getElementById("first-name").value;
+        //    let lastName = document.getElementById("last-name").value;
+        //   let  contactNo = document.getElementById("contact-no").value;
+        //    let birth = document.getElementById("birth-date").value;
+        //   let email = document.getElementById("email-id").value;
+        //     // information["education"] = document.getElementById("edu-details").value;
+        //  let address = document.getElementById("address-l").value;
+
+        student.push(information);
+
+
+        for (let i = 0; i < student.length; i++) {
+            let output = student[i];
+
+
+            // student.push( '<tr></tr>');
+            console.log("student entry", student, information);
+
+
+
+            document.getElementById("create-table").innerHTML = student,information ;
+
+            // document.getElementById("name").innerHTML = output.firstName + output.lastName;
+
+            // document.getElementById("number").innerHTML = output.contactNo;
+            // document.getElementById("date").innerHTML = output.birth;
+            // document.getElementById("birth-date").value;
+            // document.getElementById("mail-id").innerHTML = output.email;
+            // information["education"] = document.getElementById("edu-details").value;
+            // document.getElementById("add").innerHTML = output.address;
+
+            document.getElementById("create-table").innerHTML = currentCount;
+
+            tableDislay();
+
+            document.getElementById("first-name").value = "";
+            document.getElementById("last-name").value = "";
+            document.getElementById("contact-no").value = "";
+            document.getElementById("birth-date").value = "";
+            document.getElementById("email-id").value = "";
+            document.getElementById("edu-details").value = "";
+            document.getElementById("address-l").value = "";
+
+
+        }
+    }
+
+    // sec page show
+    function listDisplay() {
+
+        console.log("listDisplay");
+        document.getElementById("page-One").hidden = true;
+        document.getElementById("page-Two").hidden = false;
+    }
+    // first page show
+    window.onload = function () {
+        formDisplay();
+    }
+
+    function tableDislay() {
+
+        students.push("<tr></tr>")
+        document.getElementById("create-table").innerHTML = students;
+        //     tableBody.innerHTML = "";
+        //     student.push(
+        //             <tr>
+        //                 <td id="sr-no">1</td>
+        //                 <td id="roll-no">001</td>
+        //                 <td id="name"></td>
+        //                 <td id="number"></td>
+        //                 <td id="date"></td>
+        //                 <td id="mail-id"></td>
+        //                 <td id="education"></td>
+        //                 <td id="add"></td>
+        //             </tr>);
+
+        //         document.getElementById("create-table").innerHTML = student;
+    }
+</script>
+
+<body>
+
+    <h1 class="hOne">ENJOY PROGRAMMING</h1>
+    <div id="page-One">
+        <div>
+            <!-- buttons -->
+            <button onclick="formDisplay()">Student Data Entry</button>
+            <button onclick="listDisplay()">List Data Information</button>
+        </div>
+        <!-- form -->
+        <form>
+            <!-- fieldset -->
+            <fieldset>
+                <!-- legend -->
+                <legend>ENTER STUDENT DETAILS</legend>
+                <!-- first name -->
+                <label for="student">FIRST NAME :</label>
+                <input type="text" id="first-name" name="student" placeholder="Enter First Name" />
+                <br><br>
+                <!-- last name -->
+                <label for="student">LAST NAME :</label>
+                <input type="text" id="last-name" name="student" placeholder="Enter Last Name">
+                <br><br>
+                <!-- dob -->
+                <label for="birthdate">DOB :</label>
+                <input type="date" id="birth-date" name="birthdate" placeholder="Date Of Birth">
+                <br><br>
+                <!-- contact -->
+                <label for="cont">CONTACT NO. :</label>
+                <input type="number" id="contact-no" name="cont">
+                <br><br>
+                <!-- education -->
+                <label for="education">EDUCATION : </label>
+                <input class="text" id="edu-details" type="radio" name="education">
+                <label> Graduate </label>
+                <input class="text" class="text" type="radio" name="education">
+                <label> Graduate</label>
+                <input class="text" type="radio" name="education">
+                <label>Post Graduate.</label>
+                <br><br>
+                <!-- address -->
+                <label for="address">ADDRESS :</label>
+                <!-- city -->
+                <label for="city">City :</label>
+                <input type="text" id="address-l" name="address">
+                <!-- dist -->
+                <label for="dist">Dist :</label>
+                <select>
+                    <option value="dist">Nagpur</option>
+                    <option value="dist">Amravati</option>
+                    <option value="dist">Gondia</option>
+                </select>
+                <br>
+                <!-- state -->
+                <label>State :</label>
+                <select>
+                    <option value="state">Maharashtra</option>
+                    <option value="state">Pune</option>
+                    <option value="state">Nashik</option>
+                </select>
+                <br><br>
+                <!-- email -->
+                <label for="email">EMAIL ID :</label>
+                <input type="email" id="email-id" name="email" placeholder="Enter Email id">
+                <br><br>
+                <!-- password -->
+                <label for="password">PASSWORD :</label>
+                <input type="password" name="password" placeholder="Enter Password">
+                <br><br>
+
+            </fieldset>
+        </form>
+        <button type="submit" onclick="showFunction()">SUBMIT</button>
+    </div>
+    <!-- list data -->
+    <div id="page-Two">
+        <div>
+            <!-- buttons -->
+            <button onclick="formDisplay()">Student Data Entry</button>
+            <button onclick="listDisplay()">List Data Information</button>
+        </div>
+        <h1>Student data Information</h1>
+        <table id="add-info">
+
+            <!-- heading row -->
+            <thead>
+                <tr>
+                    <th>Sr No</th>
+                    <th>Roll No</th>
+                    <th>Student Name</th>
+                    <th>Contact No</th>
+                    <th>DOB</th>
+                    <th>Email </th>
+                    <th>Education Details</th>
+                    <th>Address</th>
+
+                </tr>
+            </thead>
+            <!-- first row -->
+            <!-- <tbody id="create-table">
+                <tr>
+                    <td id="sr-no"></td>
+                    <td id="roll-no"></td>
+                    <td id="name"></td>
+                    <td id="number"></td>
+                    <td id="date"></td>
+                    <td id="mail-id"></td>
+                    <td id="education"></td>
+                    <td id="add"></td>
+                </tr>
+            </tbody> -->
+            <!-- sec row -->
+            <tbody id="create-table">
+                <tr>
+                </tr>
+            </tbody>
+            <!-- third row -->
+            <!-- <tr>
+                    <td>3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr> -->
+            <!-- forth row -->
+            <!-- <tr>
+                    <td>4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr> -->
+            <!-- fifth row -->
+            <!-- <tr>
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>  -->
+        </table>
+
+    </div>
+    <!-- <script src="dataentry.js"></script> -->
+</body>
+
+</html>
