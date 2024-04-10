@@ -65,13 +65,62 @@
         }
     </style>
     <script>
+        let currentCount = 1;
+        let student = [];
+        let students = ["<tr></tr>"];
 
 
-
+        //  entry function
         function entryFunction() {
             document.getElementById("input").hidden = false;
             document.getElementById("entry").hidden = true;
 
+        }
+        // data show function
+        function showFunction() {
+            console.log("showfunction");
+            currentCount++;
+            let information = {};
+            // inputs
+            information["firstName"] = document.getElementById("fname").value;
+            information["lastName"] = document.getElementById("lname").value;
+            information["contactNo"] = document.getElementById("phone").value;
+            information["birth"] = document.getElementById("birthdate").value;
+            information["email"] = document.getElementById("email").value;
+            information["education"] = document.getElementById("education").value;
+            information["address"] = document.getElementById("address").value;
+
+
+
+            student.push(information);
+
+
+            for (let i = 0; i < student.length; i++) {
+                let output = student[i];
+
+
+                // student.push( '<tr></tr>');
+                console.log("student entry", student, information);
+
+
+
+                document.getElementById("create-table").innerHTML = student, information;
+
+
+                document.getElementById("create-table").innerHTML = currentCount;
+
+                tableDislay();
+
+                document.getElementById("fname").value = "";
+                document.getElementById("lname").value = "";
+                document.getElementById("phone").value = "";
+                document.getElementById("birthdate").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("education").value = "";
+                document.getElementById("address").value = "";
+
+
+            }
         }
 
         function listFunction() {
@@ -81,6 +130,30 @@
         window.onload = function () {
             entryFunction();
         }
+
+
+
+        tableDislay();
+
+        document.getElementById("fname").value = "";
+        document.getElementById("lname").value = "";
+        document.getElementById("phone").value = "";
+        document.getElementById("birthdate").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("education").value = "";
+        document.getElementById("address").value = "";
+
+
+
+        function tableDislay() {
+
+            students.push("<tr></tr>")
+            document.getElementById("create-table").innerHTML = students;
+          
+        }
+
+
+
 
 
 
@@ -184,71 +257,31 @@
             <button class="start-button" onclick="entryFunction()">ENTRY FORM</button>
             <button class="start-button" onclick="listFunction()">LIST</button><br>
         </div>
+        <h1>Student data Information</h1>
+        <table id="add-info">
 
-        <table>
-            <!-- table heading-->
-            <caption>STUDEINT DATA INFORMATION</caption>
-            <tr>
-                <th>FIRST NAME</th>
-                <th>LAST NAME</th>
-                <th>GENDER</th>
-                <th>EDUCATION</th>
-                <th>CONTACT NO</th>
-                <th>ADDRESS</th>
-                <th>ROLL NO</th>
-                <th>EMAIL ID</th>
-                <th>DOB</th>
-                <th>COMMUNICATION SKILL</th>
-                <th>LANGUAGE KNOWN</th>
-                <th>TELL SOMETHING ABOUT YOURSELF</th>
+            <!-- heading row -->
+            <thead>
+                <tr>
+                    <th>Sr No</th>
+                    <th>Roll No</th>
+                    <th>Student Name</th>
+                    <th>Contact No</th>
+                    <th>DOB</th>
+                    <th>Email </th>
+                    <th>Education Details</th>
+                    <th>Address</th>
 
-            </tr>
-            <!-- data of students -->
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr> 
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-
+                </tr>
+            </thead>
+           
+            <tbody id="create-table">
+                <tr>
+                </tr>
+            </tbody>
+            
+                </tr>  
         </table>
-
 
 
     </div>
