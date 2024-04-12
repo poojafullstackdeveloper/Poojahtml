@@ -138,7 +138,7 @@ button {
     
     /* ... other selectors ... */
     
-    /* Media query for tablets */
+    /* Media query for tablets
     @media (max-width: 768px) {
     .main {
     height: auto;
@@ -157,12 +157,12 @@ button {
     .img1 {
     height: 50px;
     width: 70px;
-    }
+    } */
     /* ... other responsive styles ... */
-    }
+    /* } */
     
     /* Media query for mobile devices */
-    @media (max-width: 480px) {
+    /* @media (max-width: 480px) {
     .main {
     grid-template-rows: repeat(5, auto);
     }
@@ -176,6 +176,6 @@ button {
     .img1 {
     height: 40px;
     width: 60px;
-    }
+    } */
     /* ... other responsive styles ... */
-    }
+    /* } */
