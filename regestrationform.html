@@ -4,76 +4,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REGESTRATION FORM</title>
-
-
+    <title>Form</title>
     <style>
-        /* main-container */
-        .main-container {
-            height: 100vh;
-            width: 100vw;
+        form {
             background-color: #BED7DC;
 
         }
 
-        /* tab */
-        .tab {
-            height: 10%;
-            width: 100%;
-            background-color: #BED7DC;
+        label {
+            font-size: 20PX;
+            color: black;
 
-            display: flex;
-            flex-direction: row;
 
         }
 
-        /* start button */
+        input {
+            margin: 15px;
+            padding: 10px;
+            text-align: center;
+            font-size: 15px;
+            border-color: black;
+        }
+
         .start-button {
-            height: 70%;
-            width: 100%;
+            height: 30%;
+            width: 20%;
             background-color: #FFC94A;
             color: black;
-            margin-left:2%;
-            margin-right: 2%;
-            font-size: 30px;
-            border-radius: 30%;
-            
         }
+
+        .input-button {
+            font-size: 20;
+            color: black;
+
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            width: 200px;
+            height: 50px;
+            margin-left: 10%;
+        }
+
         .heading {
             font: 30px;
-            color:black;
+            color: black;
             text-align: center;
         }
+
+        table,
+        th,
+        tr,
+        td {
+            border-color: black;
+            border-style: solid;
+            border-collapse: collapse;
+            margin: 20px;
+            padding: 20px;
+        }
     </style>
+    <script>
+        //  entry function
+        let student = [];
+         let students =[' <tr><td id="name"></td><td id="mail-id"></td><td id="con-no"></td></tr>']
+
+        function entryFunction() {
+            console.log("entryFunction")
+            document.getElementById("input").hidden = false;
+            document.getElementById("entry").hidden = true;
+
+        }
+
+        // showdata
+        function showData() {
+
+            let information = {};
+
+            information["firstName"] = document.getElementById("first-name").value;
+            information["lastName"] = document.getElementById("last-name").value;
+            information["contactNo"] = document.getElementById("phone-no").value;
+            information["DOB"] = document.getElementById("birth-day").value;
+            information["email"] = document.getElementById("email-id").value;
+            information["education"] = document.getElementById("edu-cation").value;
+            information["address"] = document.getElementById("address-l").value;
+
+
+            student.push(information);
+          
+
+            for (let i = 0; i < student.length; i++) {
+                let output = student[i];
+
+            }
+            students.push(' <tr><td id="name"></td><td id="mail-id"></td><td id="con-no"></td></tr>');
+
+            console.log("showdata", student, information);
+            document.getElementById("name").innerHTML=firstName + lastName;
+            document.getElementById("mail-id").innerHTML=output.contactNo;
+
+            document.getElementById("first-name").value = "";
+            document.getElementById("last-name").value = "";
+            document.getElementById("phone-no").value = "";
+            document.getElementById("birth-day").value = "";
+            document.getElementById("email-id").value = "";
+            document.getElementById("edu-cation").value = "";
+            document.getElementById("address-l").value = "";
+        }
+
+        function listFunction() {
+            document.getElementById("input").hidden = true;
+            document.getElementById("entry").hidden = false;
+        }
+
+
+        window.onload = function () {
+            entryFunction();
+        }
+    </script>
     <!-- Link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-    <!-- main-conatainer -->
-    <div class="main-container">
-        <!-- tab -->
-        <div id="input" class="tab">
-          
-                <button class="start-button" onclick="entryFunction()">ENTRY FORM</button>
-                <button class="start-button" onclick="listFunction()">LIST</button><br>
-           
-
+    <div id="input">
+        <div>
+            <button class="start-button" onclick="entryFunction()">ENTRY FORM</button>
+            <button class="start-button" onclick="listFunction()">LIST</button><br>
         </div>
-        <!-- FORM -->
-        <form>
+
+        <form action="#" method="get">
             <fieldset>
+
+
                 <h1 class="heading">ADMISSION FORM</h1>
                 <br>
                 <!-- First Name -->
                 <label>FIRST NAME:</label>
-                <input type="text" id="fname" name="fname" placeholder="ENTER FIRST NAME"><br />
+                <input type="text" id="first-name" name="fname" placeholder="ENTER YOUR FIRST NAME"><br />
                 <br>
                 <!-- Last name -->
                 <label>LAST NAME:</label>
-                <input type="text" id="lname" name="lname" placeholder="ENTER LAST NAME"><br />
+                <input type="text" id="last-name" name="lname" placeholder="ENTER YOUR  LAST NAME"><br />
                 <br>
                 <!-- Gender -->
                 <label>GENDER:</label>
@@ -84,7 +159,7 @@
                 <br>
                 <!-- Education  -->
                 <label>EDUCATION:</label>
-                <select name="education" id="education">
+                <select name="education" id="edu-cation">
                     <optgroup label="DEGREE">Proficient
                         <option value="BE">BE</option>
                         <option value="BSC">BSC</option>
@@ -96,29 +171,86 @@
                 <br>
                 <!-- Contact Number -->
                 <label>CONTACT NO.:</label>
-                <input type="tel" id="phone" name="phone"><br />
+                <input type="number" id="phone-no" name="phone"><br />
                 <br>
                 <!-- Address -->
                 <label>ADDRESS:</label>
 
-                <input type="text" id="address" name="address"><br>
+                <input type="text" id="address-l" name="address"><br>
                 <br>
-                
+                <!-- Roll No. -->
+                <label>ROLL NO.:</label>
+                <input type="number" id="roll" name="roll"><br>
+                <br>
+
                 <!-- Email -->
                 <label>EMAIL ID:</label>
-                <input type="email" id="email" name="email" placeholder="abd@gmail.com"><br />
+                <input type="email" id="email-id" name="email" placeholder="abd@gmail.com"><br />
                 <br />
                 <!-- DOB -->
                 <label>DOB</label>
-                <input type="date" id="birthday" name="birthday"><br />
-               
-               
-               
+                <input type="date" id="birth-day" name="birth"><br />
+                <!--Communication skill  -->
+                <label>COMMUNICATION SKILL:</label>
+                <input type="range" id="range" name="range"><br />
+                <br />
+                <!-- language known -->
+                <label>LANGAUGE KNOWN:</label>;
+
+                <div class="input-button"> <input class="input-button" type="checkbox" id="HTML" name="HTML">HTML
+                    &nbsp;&nbsp; <input type="checkbox" id="CSS" name="CSS">CSS
+                    <input type="checkbox" id="PYTHON" name="PYTHON">PYTHONL
+                    <input type="checkbox" id="RUBY" name="RUBY">RUBY
+                </div>
+                <!-- tell something about your self -->
+                <label>TELL SOMETHING ABOUT YOURSELF:</label>
+                <textarea style="width: 250px;height:100px;border-color:black ;" name="message"
+                    placeholder="TELL SOMETHING ABOUT YOURSELF"></textarea><br>
+                <br />
                 <!-- button -->
-                <button type="submit" onclick="dataFunction()">SUBMIT</button>
+
                 <button type="reset">CLOSE</button>
+
             </fieldset>
         </form>
+        <button type="submit" onclick="showData()">SUBMIT</button>
+    </div>
+
+    <div id="entry">
+        <div>
+            <button class="start-button" onclick="entryFunction()">ENTRY FORM</button>
+            <button class="start-button" onclick="listFunction()">LIST</button><br>
+        </div>
+        <h1>Student D.ata Information</h1>
+        <table id="add-info">
+
+            <!-- heading row -->
+            <thead>
+                <tr>
+                    <th>Sr No</th>
+                    <th>Roll No</th>
+                    <th>Student Name</th>
+                    <th>Contact No</th>
+                    <th>DOB</th>
+                    <th>Email </th>
+                    <th>Education Details</th>
+                    <th>Address</th>
+
+                </tr>
+            </thead>
+
+            <!-- <tbody id="create-table"> -->
+                <tr>
+                    <td id="name"></td>
+                    <td id="mail-id"></td>
+                    <td id="con-no"></td>
+                </tr>
+            <!-- </tbody> -->
+
+            </tr>
+        </table>
+
+
     </div>
 
 </body>
