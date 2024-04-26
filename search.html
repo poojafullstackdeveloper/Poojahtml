@@ -13,7 +13,7 @@
             background-color: wheat;
             display: flex;
             justify-content: center;
-   
+
         }
 
 
@@ -22,6 +22,55 @@
             font-size: 16px;
             border: 2px solid black;
             border-radius: 5px;
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .main-container {
+                width: 1000px;
+                /* Adjust the width for smaller screens */
+                height: auto;
+                /* Adjust the height to be auto */
+            }
+        }
+
+        @media only screen and (max-width: 992px) {
+            .main-container {
+                width: 800px;
+                /* Adjust the width for medium screens */
+            }
+
+            #search {
+                width: 80%;
+                /* Make the search input wider */
+                margin: 0 auto;
+                /* Center the search input */
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .main-container {
+                width: 600px;
+                /* Adjust the width for small screens */
+            }
+
+            #search {
+                width: 90%;
+                /* Make the search input even wider */
+            }
+        }
+
+        @media only screen and (max-width: 576px) {
+            .main-container {
+                width: 100%;
+                /* Full width on extra small screens */
+                padding: 0 20px;
+                /* Add some padding */
+            }
+
+            #search {
+                font-size: 14px;
+                /* Adjust font size for better readability */
+            }
         }
     </style>
     <script>
@@ -35,13 +84,13 @@
             while (x < student.length) {
 
 
-                if (student[x]=input) {
+                if (student[x] = input) {
 
                     output = "student are found";
 
                     x++;
                 }
-                if (student[x]=input) {
+                if (student[x] = input) {
 
                     output = "student are found";
                 }
@@ -51,7 +100,7 @@
                 }
             }
         }
-    </script> 
+    </script>
 </head>
 
 <body>
