@@ -55,6 +55,55 @@
             color: white;
 
         }
+
+        @media (max-width: 768px) {
+            .main-container {
+                width: 70vw;
+                /* Adjust width for tablet screens */
+                margin-left: 5%;
+                /* Center the container more */
+            }
+
+            .display,
+            .input-section,
+            button {
+                width: 90%;
+                /* Make elements wider on smaller screens */
+                margin-left: 5%;
+                /* Adjust margin */
+            }
+        }
+
+        /* Media query for mobile devices */
+        @media (max-width: 480px) {
+            .main-container {
+                width: 90vw;
+                /* Adjust width for mobile screens */
+                margin-left: 5%;
+                /* Center the container more */
+                border-radius: 5%;
+                /* Smaller border radius for a softer look */
+            }
+
+            .display,
+            .input-section,
+            button {
+                width: 100%;
+                /* Elements take full width */
+                margin-left: 0;
+                /* Remove margin */
+            }
+
+            .display {
+                height: 20vh;
+                /* Adjust display height for mobile */
+            }
+
+            button {
+                height: 40px;
+                /* Adjust button height for easier tapping */
+            }
+        }
     </style>
     <script>
         function arithmatic() {
@@ -85,6 +134,7 @@
 <body>
     <!-- main container -->`
     <div class="main-container">
+        <h1 style="text-align: center;">TICKET</h1>
         <!-- display -->
         <div class="display" id="display"></div>
         <input class="input-section" type="number" id="number">
