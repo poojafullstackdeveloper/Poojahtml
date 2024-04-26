@@ -83,6 +83,63 @@
             font-size: 20px;
             color: #FFC374;
         }
+
+        /* Media Queries */
+        @media only screen and (max-width: 600px) {
+            .main-container {
+                width: 100%;
+                margin-left: 0;
+                border-radius: 5%;
+            }
+
+            .display {
+                width: 90%;
+                margin-left: 5%;
+                border-radius: 5%;
+            }
+
+            .input-section {
+                width: 80%;
+                margin-left: 10%;
+            }
+
+            button {
+                width: 80%;
+                margin-left: 10%;
+            }
+
+            table,
+            th,
+            tr,
+            td {
+                font-size: 12px;
+            }
+
+            th,
+            caption {
+                font-size: 16px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+        @media only screen and (min-width: 601px) and (max-width: 1024px) {
+            .main-container {
+                width: 70%;
+                margin-left: 15%;
+                border-radius: 8%;
+            }
+
+            .display {
+                width: 85%;
+                margin-left: 7.5%;
+                border-radius: 8%;
+            }
+
+            /* Adjust other elements as needed */
+        }
     </style>
     <script>
         function calculateBill() {
@@ -92,30 +149,31 @@
             if (units <= 50) {
                 bill = units * 1.5;
                 document.getElementById("display").innerHTML = "THE BILL IS=" + bill;
-                if(days>10 && days<20){
-                    document.getElementById("display").innerHTML = "THE BILL IS=" + bill+20;
-                }else if(days>20){
-                    document.getElementById("display").innerHTML = "THE BILL IS=" + bill+40;
+                if (days > 10 && days < 20) {
+                    document.getElementById("display").innerHTML = "THE BILL IS=" + bill + 20;
+                } else if (days > 20) {
+                    document.getElementById("display").innerHTML = "THE BILL IS=" + bill + 40;
                 }
-                else if(days>25){
-                    document.getElementById("display").innerHTML = "THE BILL IS=" + bill+100;}
+                else if (days > 25) {
+                    document.getElementById("display").innerHTML = "THE BILL IS=" + bill + 100;
+                }
 
-                    else if(days>180){
-                    document.getElementById("display").innerHTML = "THE BILL IS=" + bill+"Line cut";
+                else if (days > 180) {
+                    document.getElementById("display").innerHTML = "THE BILL IS=" + bill + "Line cut";
 
                 }
-                
+
             }
             else if (units >= 51 && units <= 150) {
-                bill = (50 * 1.5 )+ (units - 50 )* 2.5;
+                bill = (50 * 1.5) + (units - 50) * 2.5;
                 document.getElementById("display").innerHTML = "THE BILL IS=" + bill;
             }
             else if (units >= 151 && units <= 250) {
-                bill = (50 * 1.5 )+ (100 * 2.5) + (units - 150 )* 3.5;
+                bill = (50 * 1.5) + (100 * 2.5) + (units - 150) * 3.5;
                 document.getElementById("display").innerHTML = "THE BILL IS=" + bill;
             }
             else if (x > 250) {
-                bill = (50 * 2.5) + (100 * 3.5 )+ (units - 250);
+                bill = (50 * 2.5) + (100 * 3.5) + (units - 250);
                 document.getElementById("display").innerHTML = "THE BILL IS=" + bill;
 
             }
