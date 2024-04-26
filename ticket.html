@@ -51,17 +51,21 @@
             background-color: #00224D;
             margin-left: 10%;
             margin-top: 3%;
+            margin-bottom: 5px;
             text-align: center;
             color: white;
 
         }
 
+        /* Media query for tablets */
         @media (max-width: 768px) {
             .main-container {
                 width: 70vw;
                 /* Adjust width for tablet screens */
-                margin-left: 5%;
+                margin-left: 15%;
                 /* Center the container more */
+                border-radius: 5%;
+                /* Adjust border radius */
             }
 
             .display,
@@ -69,8 +73,20 @@
             button {
                 width: 90%;
                 /* Make elements wider on smaller screens */
-                margin-left: 5%;
-                /* Adjust margin */
+                margin: 10px auto;
+                /* Center elements and add some space */
+                padding: 10px;
+                /* Adjust padding */
+            }
+
+            .display {
+                height: 25vh;
+                /* Adjust display height */
+            }
+
+            button {
+                height: 45px;
+                /* Adjust button height */
             }
         }
 
@@ -79,19 +95,23 @@
             .main-container {
                 width: 90vw;
                 /* Adjust width for mobile screens */
-                margin-left: 5%;
-                /* Center the container more */
-                border-radius: 5%;
-                /* Smaller border radius for a softer look */
+                margin: 0 auto;
+                /* Center the container */
+                height: auto;
+                /* Adjust height to fit content */
+                padding: 10px;
+                /* Add padding */
+                border-radius: 2%;
+                /* Smaller border radius */
             }
 
             .display,
             .input-section,
             button {
-                width: 100%;
-                /* Elements take full width */
-                margin-left: 0;
-                /* Remove margin */
+                width: calc(100% - 20px);
+                /* Elements take full width minus padding */
+                margin: 10px auto;
+                /* Center elements and add some space */
             }
 
             .display {
@@ -102,6 +122,8 @@
             button {
                 height: 40px;
                 /* Adjust button height for easier tapping */
+                font-size: 16px;
+                /* Increase font size for readability */
             }
         }
     </style>

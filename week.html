@@ -6,63 +6,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week</title>
     <style>
-        @media (min-width: 360px) and (max-width: 1200px) {
+        /* main container */
+        .main-container {
+            height: 80vh;
+            width: 50vw;
+            background-color: #007F73;
 
-            /* main container */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 10%;
+            margin-left: 10%;
+
+        }
+
+
+
+        /* display */
+
+        .display {
+            background-color: gray;
+            height: 30vh;
+            width: 80%;
+            margin-left: 20px;
+            padding: 20px;
+            border-style: groove;
+            text-align: center;
+        }
+
+        /* input section */
+        .input-section {
+            height: 50px;
+            width: 400px;
+            background-color: #EABE6C;
+            margin-left: 4%;
+            margin-top: 3%;
+
+        }
+
+        /* button */
+
+        button {
+            height: 50px;
+            width: 400px;
+            background-color: #00224D;
+            margin-left: 9%;
+            margin-top: 3%;
+
+            text-align: center;
+            color: white;
+
+        }
+
+        @media (max-width: 768px) {
             .main-container {
-                height: 80vh;
-                width: 50vw;
-                background-color: grey;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                border-radius: 10%;
-                margin-left: 10%;
-
+                width: 80vw;
+                
+                margin-left: auto;
+                margin-right: auto;
+               
             }
 
-            /* inner container */
-            .inner-container {
-                height: 55vh;
-                width: 100%;
-                background-color: #007F73;
+            .display,
+            .input-section,
+            button {
+                width: 70%;
+              
+                margin-left: auto;
+                margin-right: auto;
+             
+            }
+        }
 
+        /* Media query for mobile devices (devices with width less than 480px) */
+        @media (max-width: 480px) {
+            .main-container {
+                width: 95vw;
+                
+                border-radius: 5%;
+               
             }
 
-            /* display */
-
-            .display {
-                background-color: gray;
-                height: 30vh;
-                width: 90%;
-
-                padding: 20px;
-                border-style: groove;
-                text-align: center;
+            .display,
+            .input-section,
+            button {
+                width: 80%;
+             
+                margin-top: 10px;
+               
             }
-
-            /* input section */
-            .input-section {
-                height: 50px;
-                width: 400px;
-                background-color: #EABE6C;
-                margin-left: 4%;
-                margin-top: 3%;
-
-            }
-
-            /* button */
 
             button {
-                height: 50px;
-                width: 400px;
-                background-color: #00224D;
-                margin-left: 4%;
-                margin-top: 3%;
-
-                text-align: center;
-                color: white;
-
+                width: 95%;
+              
+                margin-bottom: 10px;
+               
             }
         }
     </style>
@@ -106,16 +144,14 @@
 <body>
     <!-- main container -->`
     <div class="main-container">
+        <h2 style="text-align: center;">WEEK</h2>
         <!-- display -->
         <div class="display" id="display"></div>
-        <!-- inner container -->
-        <div class="inner-container">
 
-            <!-- <input class="input-section" type="number" id="demo"> -->
-            <button onclick="weekdaysFunction()">Click here</button>
-            <button onclick="clearfunction()">Clear</button>
+        <button onclick="weekdaysFunction()">Click here</button>
+        <button onclick="clearfunction()">Clear</button>
 
-        </div>
+
     </div>
 </body>
 
