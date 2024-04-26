@@ -49,6 +49,72 @@
 
             background-color: #597E52;
         }
+
+        /* Media Queries */
+        @media only screen and (max-width: 1200px) {
+
+            /* Adjustments for smaller desktops */
+            .leftbox,
+            .rightbox {
+                width: 100%;
+                /* Full width for a stacked layout */
+            }
+
+            .rightbox {
+                height: auto;
+                /* Auto height to accommodate content */
+            }
+
+            .topbox,
+            .middlebox,
+            .bottombox {
+                height: auto;
+                /* Auto height for each video box */
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+
+            /* Adjustments for tablets */
+            .maincontainer {
+                flex-direction: column;
+                /* Stack the containers vertically */
+            }
+
+            .leftbox,
+            .rightbox {
+                width: 90%;
+                /* Slightly smaller width with padding */
+                margin: 5%;
+                /* Center the boxes with margin */
+            }
+
+            .topbox,
+            .middlebox,
+            .bottombox {
+                height: auto;
+                /* Auto height for each video box */
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+
+            /* Adjustments for mobile phones */
+            .leftbox,
+            .rightbox {
+                width: 95%;
+                /* Full width with a little padding */
+                margin: 2.5%;
+                /* Center the boxes with margin */
+            }
+
+            .topbox,
+            .middlebox,
+            .bottombox {
+                height: auto;
+                /* Auto height for each video box */
+            }
+        }
     </style>
 </head>
 
