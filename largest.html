@@ -52,6 +52,43 @@
             color: white;
 
         }
+        @media only screen and (max-width: 768px) {
+.main-container {
+width: 60vw; /* Adjust the width for smaller screens */
+margin-left: 5%; /* Center the container */
+border-radius: 5%; /* Adjust the border radius */
+}
+
+.display {
+width: 80%; /* Adjust the width of the display */
+margin-left: 5%; /* Center the display */
+height: 25vh; /* Adjust the height of the display */
+}
+
+.input-section, button {
+width: 50%; /* Adjust the width of input fields and buttons */
+margin-left: 1.5%; /* Center the input fields and buttons */
+}
+}
+
+@media only screen and (max-width: 480px) {
+.main-container {
+width: 85vw; /* Adjust the width for mobile screens */
+margin-left: 1.5%; /* Center the container */
+border-radius: 2%; /* Adjust the border radius */
+}
+
+.display {
+width: 85%; /* Adjust the width of the display */
+margin-left: 2.5%; /* Center the display */
+height: 20vh; /* Adjust the height of the display */
+}
+
+.input-section, button {
+width: 50%; /* Adjust the width of input fields and buttons */
+margin-left: 2%; /* Center the input fields and buttons */
+}
+}
     </style>
     <script>
         function largestFunction() {
