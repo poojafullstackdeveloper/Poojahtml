@@ -16,97 +16,71 @@
 
         }
 
+        /* search */
 
         #search {
-            padding: 8px;
+            padding: 10px;
             font-size: 16px;
             border: 2px solid black;
             border-radius: 5px;
+            margin: 20px;
         }
 
-        @media only screen and (max-width: 1200px) {
-            .main-container {
-                width: 1000px;
-                /* Adjust the width for smaller screens */
-                height: auto;
-                /* Adjust the height to be auto */
-            }
+        /* button */
+        button {
+            background-color: green;
         }
 
-        @media only screen and (max-width: 992px) {
-            .main-container {
-                width: 800px;
-                /* Adjust the width for medium screens */
-            }
+        /* h1 */
+        h1 {
+            color: blue;
 
-            #search {
-                width: 80%;
-                /* Make the search input wider */
-                margin: 0 auto;
-                /* Center the search input */
-            }
-        }
-
-        @media only screen and (max-width: 768px) {
-            .main-container {
-                width: 600px;
-                /* Adjust the width for small screens */
-            }
-
-            #search {
-                width: 90%;
-                /* Make the search input even wider */
-            }
-        }
-
-        @media only screen and (max-width: 576px) {
-            .main-container {
-                width: 100%;
-                /* Full width on extra small screens */
-                padding: 0 20px;
-                /* Add some padding */
-            }
-
-            #search {
-                font-size: 14px;
-                /* Adjust font size for better readability */
-            }
         }
     </style>
     <script>
-        let student = ["POOJA", "SURAJ", "NIRAV", "ANIL", "SEEMA", "AKASH", "ATUL", "NEHA", "JAYA", "NIKITA", "PRIYA", "TEJAS"];
         function studentFunction() {
-            let input = document.getElementById("search").value;
+            let student = ["POOJA", "SURAJ", "NIRAV", "ANIL", "SEEMA", "AKASH", "ATUL", "NEHA", "JAYA", "NIKITA", "PRIYA", "TEJAS"];
+
 
 
             let x = 0;
-            let output;
+            let output = false;
+            let foundAtPosition = 0;
+            let input = document.getElementById("search").value;
+            
+            console.log("input", input);
+
+
+
+            //MATCH LIST
             while (x < student.length) {
+                let stu = student[x];
 
-
-                if (student[x] = input) {
-
-                    output = "student are found";
-
-                    x++;
-                }
-                if (student[x] = input) {
-
-                    output = "student are found";
+                if (stu.toUpperCase() == input.toUpperCase()) {
+                   output = true;
+                    foundAtPosition = x;
                 }
 
-                else {
-                    output = "student are not found";
-                }
+                console.log(x);
+                x++;
+            }
+            //show output
+            if (output == true) {
+                document.getElementById("display").innerHTML = "STUDENT IS FOUND";
+            }
+
+            else {
+                document.getElementById("display").innerHTML = "STUDENT IS NOT FOUND";
             }
         }
+        
     </script>
 </head>
 
 <body>
     <!-- main-container -->
     <div class="main-container">
-
+      
         <div>
             <h1> ENJOY PROGRAMMING</h1>
             <input type="text" name="search" id="search" placeholder="Search">
@@ -114,6 +88,7 @@
             <div class="display" id="display"></div>
 
         </div>
+       
     </div>
 
 </body>
