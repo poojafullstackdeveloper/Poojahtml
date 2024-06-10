@@ -69,12 +69,12 @@
         /* social-icon-wrapper:hover */
 
         .social-icon-wrapper:hover {
-            background-color: transparent !important;
+            background-color:aliceblue;
         }
 
         /* social-icon */
         .social-icon {
-            width: 20px;
+            width: 70px;
             vertical-align: top;
         }
 
@@ -151,6 +151,7 @@
             font-family: inherit;
             margin: 0;
             text-align: center;
+           
 
 
         }
@@ -287,6 +288,14 @@
             text-decoration: none;
             color: #ddd;
         }
+        /* footer */
+        footer{
+            height: 50px;
+            width: 100%;
+            background-color: #FFC94A;
+            color: #000;
+
+        }
     </style>
 
 
@@ -337,23 +346,25 @@
                     <a href="resumeone.html">RESUME</a>
 
 
-
+            </div>
                 </div>
+                <div class="dropdown">
                 <!-- dropdown css button -->
                 <button class="dropbtn" onclick="cssFunction()">CSS</button>
                 <div class="dropdown-content" id="mycssDropdown">
 
 
                     <a href="enjoy1.html">LOGIN PAGE</a>
-
+                </div>
 
                 </div>
+                <div class="dropdown">
                 <!-- dropdown javascript button -->
                 <button class="dropbtn" onclick="javaFunction()">JAVASCRIPT</button>
                 <div class="dropdown-content" id="myjavaDropdown">
 
 
-                    <a href="regestrationform.html">KBC</a>
+                    <a href="regestrationform.html">ADDMISSION FORM</a>
 
                 </div>
             </div>
@@ -454,6 +465,7 @@
                 <button class="submit"><a href="ticket.html">CLICK HERE</a></button>
 
             </div>
+            
             <!-- search -->
             <div class="grid-item">
                 <p>SEARCH</p>
@@ -565,14 +577,30 @@
             </div>
             <!-- LAYOUTTWO USING GRID -->
             <div class="grid-item">
-                <p>LAYOUTTWO USING GRIDx</p>
+                <p>LAYOUTTWO USING GRID</p>
                 <img class="img-one"
                     src="data:image/png;base64,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"><br>
                 <button class="submit"><a href="gridlayout2.html">CLICK HERE</a></button>
             </div>
 
+            <!-- DON-->
+            <div class="grid-item">
+                <p>DOM ASSIGNMENT USING JAVASCRIPT</p>
+                <img class="img-one"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAbFBMVEX///+IABWDAAB9AADHoqSBAAC8j5HVurz59vaIABOmYmbt4uPj0tOucnWzfH+GAAvMqqyYQEa4hYjz7O3bxcaaRkyQKjLo2tvBl5mSMDd5AABzAADStLaxeXy7jI+jXGCMGyWfU1iVOD/fy8xfPWGiAAACl0lEQVR4nO3c7XaaQBRG4VO+NFoxBRssKiZ6//dYCYk1TYDz2mahZj9/OyM9O1VXh6gZAAAAgC9kvB55rG3qWvdn/XVJy7BPubG8jD1Ki0LXwuP665IF3/oEmeVx76paaFH/w71Zf12IJSCWgFgCYgmIJSCWgFgCYgmIJSCWgFgCYgmIJSCWgFiCtP+0LtxYvnId5q0sCgPBtR3+5dN+uZljVc32VSLIhp4enydr+aFXI1t6/4FUi7ztYT5Ya/agPFWDYDt0o6Oy5W8Yp/bonSauCvdLVZiY/ZrfCYLJ0I2Owra3wNQe5s43tSApfO+W9dplHcu7+nkHsfyIJSCWgFgCYgmIJSCWgFgCYgmIJSCW4JJitf9Hmlh/e5p8bBvZY+w9SaiK/l+2fP2dy6Q+opkLLihWh/W9197GbocHfvqh2G2GDoEzLNzPn+ZJlFo+mYkmlq+kq9RW46HTvLdwvzI3L7aZ5dL9m1rpvZN2KryNWPLgIbGEuYklzE0sYW5iCXMTS5ibWMLcxBLmJpYwN7GEuYklzE0sYW5iCXMTS5ibWMLcxBLmvplY2lFefGYs39dCvPnKhwuMVcxSxWZ9xhHxyuy7bugy+CfrqMveOv/4xPLwWAvv4lOFua/RXGjAZ+eu6z5qWJn3Nmv9uZJUvpNxuMS9ua/RXGg6XKyfXTfSg8SCO+9ruOsjU+8vcYjlvcazmFh+xBI2EEvYQCxhA7GEDcQSNhBL2EAsYQOxhA3EEjYQS9hALGEDsYQNQ8badX1fiHhEc/Oxis6T3al5j5tndSzpYKoRX1Os/ynatnxYo8N2ZKad599IrHP5P5zx8gENAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ/sN9JAeLcaQS+OAAAAAElFTkSuQmCC"><br>
+                <button class="submit"><a href="dom.html">CLICK HERE</a></button>
+            </div>
+
+            <div class="grid-item">
+                <p>DOM ASSIGNMENT USING JAVASCRIPT</p>
+                <img class="img-one"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAbFBMVEX///+IABWDAAB9AADHoqSBAAC8j5HVurz59vaIABOmYmbt4uPj0tOucnWzfH+GAAvMqqyYQEa4hYjz7O3bxcaaRkyQKjLo2tvBl5mSMDd5AABzAADStLaxeXy7jI+jXGCMGyWfU1iVOD/fy8xfPWGiAAACl0lEQVR4nO3c7XaaQBRG4VO+NFoxBRssKiZ6//dYCYk1TYDz2mahZj9/OyM9O1VXh6gZAAAAgC9kvB55rG3qWvdn/XVJy7BPubG8jD1Ki0LXwuP665IF3/oEmeVx76paaFH/w71Zf12IJSCWgFgCYgmIJSCWgFgCYgmIJSCWgFgCYgmIJSCWgFiCtP+0LtxYvnId5q0sCgPBtR3+5dN+uZljVc32VSLIhp4enydr+aFXI1t6/4FUi7ztYT5Ya/agPFWDYDt0o6Oy5W8Yp/bonSauCvdLVZiY/ZrfCYLJ0I2Owra3wNQe5s43tSApfO+W9dplHcu7+nkHsfyIJSCWgFgCYgmIJSCWgFgCYgmIJSCW4JJitf9Hmlh/e5p8bBvZY+w9SaiK/l+2fP2dy6Q+opkLLihWh/W9197GbocHfvqh2G2GDoEzLNzPn+ZJlFo+mYkmlq+kq9RW46HTvLdwvzI3L7aZ5dL9m1rpvZN2KryNWPLgIbGEuYklzE0sYW5iCXMTS5ibWMLcxBLmJpYwN7GEuYklzE0sYW5iCXMTS5ibWMLcxBLmvplY2lFefGYs39dCvPnKhwuMVcxSxWZ9xhHxyuy7bugy+CfrqMveOv/4xPLwWAvv4lOFua/RXGjAZ+eu6z5qWJn3Nmv9uZJUvpNxuMS9ua/RXGg6XKyfXTfSg8SCO+9ruOsjU+8vcYjlvcazmFh+xBI2EEvYQCxhA7GEDcQSNhBL2EAsYQOxhA3EEjYQS9hALGEDsYQNQ8badX1fiHhEc/Oxis6T3al5j5tndSzpYKoRX1Os/ynatnxYo8N2ZKad599IrHP5P5zx8gENAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ/sN9JAeLcaQS+OAAAAAElFTkSuQmCC"><br>
+                <button class="submit"><a href="dom.html">CLICK HERE</a></button>
+            </div>
+            <!-- footer -->
+            
+
             
         </div>
+        <footer>@2024</footer>
         <script src="index.js"></script>
 </body>
 
