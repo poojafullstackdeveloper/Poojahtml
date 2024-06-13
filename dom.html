@@ -1,82 +1,109 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      .main-container {
-        width: 100vw;
-        height: 100vh;
-        background-color: lightblue;
-        display: flex;
-        flex-direction: row;
-      }
-      .left-container {
-        width: 50%;
-        height: 100%;
-        background-color: blue;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 50px;
-      }
-      .right-container_cl {
-        width: 50%;
-        height: 100%;
-        background-color: green;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: flex-end;
-        flex-wrap: wrap;
-      }
-      .plus-button {
-        background-color: green;
-        width: 40%;
-        height: 100px;
-        font-size: 22px;
-      }
-      .plus-button-hover {
-        background-color: #ffffff;
-        width: 40%;
-        height: 120px;
-        font-size: 32px;
-      }
-      .minus-button {
-        background-color: red;
-        width: 40%;
-        height: 100px;
-        font-size: 22px;
-      }
-      .brick {
-        background-color: red;
-        border-color: black;
-        border-width: 10px;
-        border-style: solid;
-        width: 20%;
-        height: 80px;
-        margin: 5px;
-      }
-    </style>
-  </head>
+<html lang="en">
 
-  <body style="margin: 0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        /* main-container */
+        .main-container {
+            height: 100vh;
+            width: 100vw;
+            background-color: aqua;
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* left-container */
+        .left-container {
+            height: 100%;
+            width: 50vw;
+            background-color: #FF6500;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+
+
+        }
+
+        /* right-container */
+        .right-container {
+            height: 100%;
+            width: 50vw;
+            background-color: #90D26D;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            align-items: flex-end;
+
+
+        }
+
+        /* plus-button */
+        .plus-button {
+            height: 70px;
+            width: 150px;
+            background-color: green;
+            border-width: 2px;
+            border-style: solid;
+            border-color: black;
+            font-size: 22px;
+        }
+
+        .plus-button-hover {
+            background-color: #ffffff;
+            width: 40%;
+            height: 120px;
+            font-size: 32px;
+        }
+
+        /* minus-button */
+        .minus-button {
+            height: 70px;
+            width: 150px;
+            background-color: red;
+            border-width: 2px;
+            border-style: solid;
+            border-color: black;
+            font-size: 22px;
+        }
+
+        /* brick */
+        .brick {
+            height: 50px;
+            width: 100px;
+            background-color: brown;
+            border-width: 4px;
+            border-style: solid;
+            border-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <!--  main-container  -->
     <div class="main-container">
-      <div class="left-container">
-        <h1 style="color: white" id="count">1</h1>
-        <button
-          id="button-one"
-          class="plus-button"
-          onclick="addBrick()"
-          onmouseover="changeButtonColor()"
-        >
-          ADD
-        </button>
+        <!--  left-container  -->
+        <div class="left-container">
+            <h1 style="color: #ffffff;" id="count">1</h1>
+        <!-- plus-button  -->
+        <button   id="button-one"  class="plus-button" onclick="addBrick()" onmouseover="changeButtonColor()"
+        >ADD</button>
+        <!-- minus-button -->
         <button class="minus-button" onclick="removeBrick()">REMOVE</button>
-      </div>
-      <div id="right-container" class="right-container_cl">
-        <div class="brick"></div>
-      </div>
+        </div>
+        <!-- right-container  -->
+        <div class="right-container" id="right-container">
+            <!-- brick  -->
+            <div class="brick"></div>
+        </div>
+
     </div>
-    <script src="dom.js"></script>
-  </body>
+    <script src="domone.js"></script>
+</body>
+
 </html>
