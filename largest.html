@@ -23,7 +23,7 @@
         .display {
             background-color: gray;
             height: 20vh;
-            width: 80%;
+            width: 70%;
             margin-left: 45px;
             padding: 20px;
             border-style: groove;
@@ -35,7 +35,7 @@
             height: 50px;
             width: 550px;
             background-color: #EABE6C;
-            margin-left: 10%;
+            margin-left: 15%;
             margin-top: 3%;
 
         }
@@ -46,49 +46,68 @@
             height: 50px;
             width: 550px;
             background-color: #00224D;
-            margin-left: 10%;
+            margin-left: 15%;
             margin-top: 3%;
             text-align: center;
             color: white;
 
         }
+
         @media only screen and (max-width: 768px) {
-.main-container {
-width: 60vw; /* Adjust the width for smaller screens */
-margin-left: 5%; /* Center the container */
-border-radius: 5%; /* Adjust the border radius */
-}
+            .main-container {
+                width: 60vw;
+                /* Adjust the width for smaller screens */
+                margin-left: 5%;
+                /* Center the container */
+                border-radius: 5%;
+                /* Adjust the border radius */
+            }
 
-.display {
-width: 80%; /* Adjust the width of the display */
-margin-left: 5%; /* Center the display */
-height: 25vh; /* Adjust the height of the display */
-}
+            .display {
+                width: 70%;
+                /* Adjust the width of the display */
+                margin-left: 5%;
+                /* Center the display */
+                height: 25vh;
+                /* Adjust the height of the display */
+            }
 
-.input-section, button {
-width: 50%; /* Adjust the width of input fields and buttons */
-margin-left: 1.5%; /* Center the input fields and buttons */
-}
-}
+            .input-section,
+            button {
+                width: 50%;
+                /* Adjust the width of input fields and buttons */
+                margin-left: 1.5%;
+                /* Center the input fields and buttons */
+            }
+        }
 
-@media only screen and (max-width: 480px) {
-.main-container {
-width: 85vw; /* Adjust the width for mobile screens */
-margin-left: 1.5%; /* Center the container */
-border-radius: 2%; /* Adjust the border radius */
-}
+        @media only screen and (max-width: 480px) {
+            .main-container {
+                width: 85vw;
+                /* Adjust the width for mobile screens */
+                margin-left: 1.5%;
+                /* Center the container */
+                border-radius: 2%;
+                /* Adjust the border radius */
+            }
 
-.display {
-width: 85%; /* Adjust the width of the display */
-margin-left: 2.5%; /* Center the display */
-height: 20vh; /* Adjust the height of the display */
-}
+            .display {
+                width: 70%;
+                /* Adjust the width of the display */
+                margin-left: 2.5%;
+                /* Center the display */
+                height: 20vh;
+                /* Adjust the height of the display */
+            }
 
-.input-section, button {
-width: 50%; /* Adjust the width of input fields and buttons */
-margin-left: 2%; /* Center the input fields and buttons */
-}
-}
+            .input-section,
+            button {
+                width: 50%;
+                /* Adjust the width of input fields and buttons */
+                margin-left: 2%;
+                /* Center the input fields and buttons */
+            }
+        }
     </style>
     <script>
         function largestFunction() {
@@ -96,17 +115,17 @@ margin-left: 2%; /* Center the input fields and buttons */
             let y = document.getElementById("numtwo").value;
             let z = document.getElementById("numthree").value;
             let output;
-            if (x > y && x >z) {
+            if (x > y && x > z) {
                 output = x;
-                document.getElementById("display").innerHTML = "THE NUMBER IS LAREGE" +output;
+                document.getElementById("display").innerHTML = "THE NUMBER IS LAREGE" + output;
             }
             else if (y > z && y > x) {
-                output=y;
-                document.getElementById("display").innerHTML = "THE NUMBER IS LAREGE"+output;
+                output = y;
+                document.getElementById("display").innerHTML = "THE NUMBER IS LAREGE" + output;
             }
             else {
                 output = z;
-                document.getElementById("display").innerHTML = "THE NUMBER IS LAREGE"+output;
+                document.getElementById("display").innerHTML = "THE NUMBER IS LAREGE" + output;
             }
 
 
