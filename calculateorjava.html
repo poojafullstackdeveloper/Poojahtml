@@ -3,8 +3,15 @@
 
 <head>
     <style>
+     body {
+           
+            background-image: url(https://img.freepik.com/free-photo/top-view-notebooks-calculator_23-2149103982.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
         /* main */
-        .main {
+        .inner {
             background-color: grey;
             height: 50vh;
             width: 35vw;
@@ -13,6 +20,7 @@
             border-radius: 15px;
             margin-left: 30%;
             margin-top: 10%;
+
 
         }
 
@@ -204,45 +212,51 @@
 
 </head>
 
-<body
-    style="background-image: url(https://cdn.dribbble.com/users/374101/screenshots/5855383/_office.gif);background-size: cover;background-repeat: no-repeat;">
+<body>
 
-    <!-- MAIN -->
-    <div class="main">
-        <div class="first ">
 
-            <h1 id="display"></h1>
+    <body>
+      
+
+        <!-- MAIN -->
+        <div class="inner">
+            <div class="first ">
+
+                <h1 id="display"></h1>
+
+            </div>
+            <div class="second">
+                <div><button type="submit" onclick="clearfunction()">AC</button></div>
+                <div><button onclick="backspace()">Backspace</button></div>
+                <div><button type="submit">%</button></div>
+                <div><button type="submit" class="last-column" onclick="div()">/</button></div>
+                <div><button onclick="numberTypes(7)">7</button></div>
+                <div><button onclick="numberTypes(8)">8</button></div>
+                <div><button onclick="numberTypes(9)">9</button></div>
+                <div><button type="submit" class="last-column" onclick="mul()">*</button></div>
+                <div><button onclick="numberTypes(4)">4</button></div>
+                <div><button onclick="numberTypes(5)">5</button></div>
+                <div><button onclick="numberTypes(6)">6</button></div>
+                <div><button type="submit" class="last-column" onclick="sub()">-</button></div>
+                <div><button onclick="numberTypes(1)">1</button></div>
+                <div><button onclick="numberTypes(2)">2</button></div>
+                <div><button onclick="numberTypes(3)">3</button></div>
+                <div><button type="submit" class="last-column" onclick="add()">+</button></div>
+            </div>
+            <div class="last-row">
+                <div><button onclick="numberTypes(0)">0</button></div>
+                <div><button onclick="numberTypes()">.</button></div>
+                <div><button class="last-column" onclick="showresult()">=</button></div>
+            </div>
+          
+
+
 
         </div>
-        <div class="second">
-            <div><button type="submit" onclick="clearfunction()">AC</button></div>
-            <div><button onclick="backspace()">Backspace</button></div>
-            <div><button type="submit">%</button></div>
-            <div><button type="submit" class="last-column" onclick="div()">/</button></div>
-            <div><button onclick="numberTypes(7)">7</button></div>
-            <div><button onclick="numberTypes(8)">8</button></div>
-            <div><button onclick="numberTypes(9)">9</button></div>
-            <div><button type="submit" class="last-column" onclick="mul()">*</button></div>
-            <div><button onclick="numberTypes(4)">4</button></div>
-            <div><button onclick="numberTypes(5)">5</button></div>
-            <div><button onclick="numberTypes(6)">6</button></div>
-            <div><button type="submit" class="last-column" onclick="sub()">-</button></div>
-            <div><button onclick="numberTypes(1)">1</button></div>
-            <div><button onclick="numberTypes(2)">2</button></div>
-            <div><button onclick="numberTypes(3)">3</button></div>
-            <div><button type="submit" class="last-column" onclick="add()">+</button></div>
         </div>
-        <div class="last-row">
-            <div><button onclick="numberTypes(0)">0</button></div>
-            <div><button onclick="numberTypes()">.</button></div>
-            <div><button class="last-column" onclick="showresult()">=</button></div>
-        </div>
+        
 
 
-
-
-    </div>
-
-</body>
+    </body>
 
 </html>
