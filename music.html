@@ -46,30 +46,20 @@
         /* button */
         button {
             height: 60px;
-            width: 90px;
-            background-color: black;
-            margin-left: 10%;
+            width: 95px;
+            margin-left: 12%;
             margin-top: 5%;
             border-radius: 50%;
             border-style: groove;
-            border-color:black;
-            object-fit:fill;
+            border-color: black;
+            object-fit: fill;
+            background-color: #F4CE14;
+            color: black;
+            font-size: 20px;
             border-color: orangered;
             text-align: center;
         }
 
-        .pic {
-            height: 55px;
-            width: 75px;
-            background-color: black;
-            z-index:auto;
-            
-            
-            border-radius: 50%;
-            border-style: groove;
-
-           
-        }
 
         /* Media Query for screens smaller than 768px */
         @media (max-width: 768px) {
@@ -131,18 +121,15 @@
             <audio id="myAudiotwo" src="./audio/banjaie-is-dilke-7141.mp3"></audio>
 
 
-           <div>
-            <!-- buttons -->
-            <button onclick="playTrack('myAudiotwo')"><img class="pic"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB1jF6w7fxsFSQcQsuA6R3eCTETsK1dOdv6w&s">Play
-                Track 1</button>
-            <button onclick="pauseTrack('myAudiotwo')"><img class="pic"
-                    src="data:image/png;base64,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">Pause
-                Track 1</button>
-            <button onclick="reverseTrack('myAudiotwo')"><img class="pic"
-                    src="data:image/png;base64,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">Reverse
-                Track 1</button>
-                </div>
+            <div>
+                <!-- buttons -->
+                <button onclick="playTrack('myAudiotwo')">Play
+                </button>
+                <button onclick="pauseTrack('myAudiotwo')">Pause
+                </button>
+                <button onclick="reverseTrack('myAudiotwo')">Reverse
+                </button>
+            </div>
         </div>
     </div>
 </body>
