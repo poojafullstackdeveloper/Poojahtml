@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- style -->
+    <style>
+        /* main-container */
+        .main-container {
+            height: 100vh;
+            width: 100vw;
+            background-image: url(https://cdn.vectorstock.com/i/500p/40/25/shopping-online-in-smartphone-application-vector-33184025.jpg);
+            object-fit: cover;
+            background-size: cover;
+
+            display: flex;
+        }
+
+        /* inner-container */
+        .inner-container {
+            height: 70vh;
+            width: 40vw;
+            background-color: #FFAAAA;
+            margin-left: 55%;
+            margin-top: 5%;
+
+
+        }
+
+        label {
+            font-size: 20px;
+            margin-left: 20px;
+        }
+
+        input {
+            height: 40px;
+            width: 350px;
+            border-style: groove;
+            border-color: black;
+        }
+
+        .chekbox {
+            height: 20px;
+            width: 20px;
+
+
+        }
+
+        h1 {
+            /* margin-left: 25%; */
+            font-size: 30px;
+            color: #131842;
+            text-align: center;
+        }
+
+
+
+
+
+
+        button {
+            height: 40px;
+            width: 200px;
+            background-color: #131842;
+            margin-left: 35%;
+            border-color: black;
+            border-style: groove;
+            border-radius: 20px;
+            font-size: 20px;
+            color: white;
+        }
+
+        p {
+            font-size: 20px;
+            margin-left: 32%;
+        }
+    </style>
+    <!-- script -->
+    <script>
+function myFunction(){
+    alert("YOUR ORDER IS CONFIRME");
+}
+
+        function showFunction() {
+            console.log("uyuyuyiu");
+            document.getElementById("first-screen").hidden = false;
+            document.getElementById("second-screen").hidden = true;
+        }
+
+        function doStart() {
+            console.log("hhjghghj");
+            document.getElementById("first-screen").hidden = true;
+            document.getElementById("second-screen").hidden = false;
+
+        }
+        window.onload = function () {
+            showFunction();
+
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <!-- main-container -->
+    <div class="main-container">
+
+        <!-- inner-container -->
+        <div class="inner-container">
+
+            <form>
+                <h1>PAYMENT METHOD</h1>
+                <label>NAME:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="email" placeholder="ENTER YOUR NAME"><br>
+                <br>
+                <label>ADDRESS:</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" placeholder="ADDRESS"><br>
+                <br>
+                <label>CONTACT NO:</label> &nbsp;&nbsp;&nbsp;
+                <input type="text" placeholder="MOBILE NUMBER"><br>
+                <br>
+                <label>EMAIL:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" placeholder="abc@gmail.com"><br>
+                <br>
+
+<div id="first-screen">
+                <br>
+                <!-- <button  onclick="doStart()">PAYMENT</button><br> -->
+                <input type="button" value="submit" onclick="doStart()"
+                    style="background-color: #131842;color: white;width: 210px; text-align: center; height: 40px; margin-left:35%">
+                <br>
+            </div>
+            </form>
+            <!--  -->
+            <div id="second-screen">
+                <div style="display: flex; justify-content: center; align-items: center;" onclick="myFunction()">
+                    <img src="https://www.investopedia.com/thmb/hJrIBjjMBGfx0oa_bHAgZ9AWyn0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/qr-code-bc94057f452f4806af70fd34540f72ad.png"
+                        style="height:100px;width:100px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- next -->
+
+    </div>
+</body>
+
+</html>
