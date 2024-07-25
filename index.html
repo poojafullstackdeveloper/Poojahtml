@@ -90,15 +90,23 @@
             color: #000;
         }
 
+
         /* h1 */
         h1 {
-            font-size: 40px;
+            font-size: 30px;
             color: #5D0E41;
             text-align: center;
             margin: 20px;
             padding: auto;
         }
 
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+                /* Adjust font size for smaller screens */
+            }
+        }
 
 
 
@@ -238,7 +246,7 @@
             .navbar {
                 flex-direction: column;
                 /* Stack items vertically */
-                align-items:normal;
+                align-items: normal;
                 /* Stretch items to fill container width */
             }
 
@@ -348,6 +356,7 @@
         .img-one:hover {
 
             filter: grayscale(0%);
+            
         }
 
         /* submit */
@@ -375,7 +384,16 @@
             width: 100%;
             background-color: #FFC94A;
             color: #000;
+            text-align: center;
 
+        }
+
+        P {
+
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+            text-shadow: 2px 2px 4px rgb
         }
 
         html {
@@ -421,6 +439,7 @@
 
             <img class="logo"
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGb6Phs7Lmeu9pZ2KEUnaAm4Kp1FY7x4-z4Q&s">
+            <h1>PROJECTS</h1>
 
         </div>
 
@@ -430,13 +449,15 @@
             <a href="contact.html">CONTACT US</a>
             <!-- dropdown -->
             <div class="dropdown">
-                <!-- dropdown html button -->
-                <button class="dropbtn" onclick="htmlFunction()">HTML</button>
-                <div class="dropdown-content" id="myhtmlDropdown">
-                    <a href="resumeone.html">RESUME</a>
+                <!-- dropdown css button -->
+                <button class="dropbtn" onclick="cssFunction()">HTML</button>
+                <div class="dropdown-content" id="mycssDropdown">
 
+
+                    <a href="fullstackresume.html">LOGIN PAGE</a>
 
                 </div>
+
             </div>
             <div class="dropdown">
                 <!-- dropdown css button -->
@@ -451,11 +472,11 @@
             </div>
             <div class="dropdown">
                 <!-- dropdown javascript button -->
-                <button class="dropbtn" onclick="javaFunction()">JAVASCRIPT</button>
+                <button class="dropbtn" onclick="javaFunction()">BOOTSTRAP</button>
                 <div class="dropdown-content" id="myjavaDropdown">
 
 
-                    <a href="regestrationform.html">ADDMISSION FORM</a>
+                    <a href="gift_shop (1).html">GIFT SHOP</a>
 
                 </div>
             </div>
