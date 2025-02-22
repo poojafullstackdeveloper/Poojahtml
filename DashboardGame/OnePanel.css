@@ -1,0 +1,19 @@
+.first-pannel {
+    height: 800px;  /* Ensures enough height while allowing flexibility */
+    width: 100%;
+    background-color: #624E88;
+    display: flex;
+    flex-wrap: wrap;  /* Ensures items wrap properly on smaller screens */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;  /* Adds space between CoinCards */
+    padding: 20px;
+    border-radius: 12px; /* Smooth rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds depth */
+}
+
+.coin-text{
+  font-size: medium;
+  text-align:start;
+    
+}
