@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #7D1C4A;
+  color: white;
+  height: 15vh;
+  width: 100vw;
+}
+
+.header .logo h1 {
+  font-size: 2rem;
+}
+
+.header .search-bar input {
+  padding: 10px;
+  border: none;
+  height: 30px;
+  width: 600px;
+  border-radius: 10px;
+}
+
+ button {
+  padding: 10px;
+  width: 100px;
+  height: 70px;
+ 
+  background-color:#3e021e;
+  cursor: pointer;
+  border-radius: 15px;
+  border-color: rgb(251, 255, 240);
+ border-style: 1px solid white;
+  color: aliceblue;
+  font-size: 20px;
+}
