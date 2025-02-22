@@ -1,0 +1,8 @@
+.cart {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+     height: 40px;
+     width: 40px;
+    
+   }
