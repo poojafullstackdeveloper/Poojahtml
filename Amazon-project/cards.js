@@ -3,7 +3,9 @@ import "./cards.css";
 
 export default class Cards extends React.Component {
   render() {
-    console.log("Products in Cards:", this.props.products); // Debugging line
+    console.log("Products in Cards:", this.props.products);
+    console.log("addToCart function:", this.props.addToCart);
+    
 
     return (
       <div className="product-container">
