@@ -1,0 +1,112 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* social-icon */
+
+
+body {
+    background: linear-gradient(135deg, #1e1e1e, #252525);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/* back button */
+.back-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Grid Item */
+.grid-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Heading */
+.grid-item p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Image */
+.img-one {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.img-one:hover {
+    opacity: 0.8;
+}
+
+/* Button */
+.submit {
+    background-color: #1A5D1A;
+    text-decoration: none;
+    font-weight: 600;
+    height: 50px;
+    width: 100px;
+    border-radius: 10%;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #ddd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
