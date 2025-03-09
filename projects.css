@@ -189,3 +189,13 @@ a {
         height: 200px;
     }
 }
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+

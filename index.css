@@ -41,7 +41,7 @@ body {
 .social-icons a {
     color: white;
     margin-left: 10px;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     transition: 0.3s;
 }
 
@@ -191,19 +191,49 @@ body {
 
 /* Contact Section */
 .contact {
-    padding: 40px;
+    padding: 50px 20px;
     text-align: center;
-    background-color:black;
+    background-color: #111;
     color: white;
 }
-.contact a {
-    text-decoration: none;}
 
-/* Footer */
+.contact h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+/* Email Button */
+.contact-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ffcc00;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-btn:hover {
+    background-color: #ffa500;
+    transform: scale(1.05);
+}
+
 footer {
     text-align: center;
     padding: 20px;
     background-color: #222;
     color: white;
-    position: fixed;
+    width: 100%;
+    position: relative;
+    bottom: 0;
 }
