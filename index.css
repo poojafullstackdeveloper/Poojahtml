@@ -4,8 +4,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color:black;
-    color: #f9f2f2;
+    background-color:rgb(243, 241, 241);
+    color: rgba(250, 244, 244, 0.706);
 }
 
 /* Navbar */
@@ -54,7 +54,7 @@ body {
     text-align: center;
     padding: 80px 20px;
     background: url('https://source.unsplash.com/1600x900/?technology,code') no-repeat center center/cover;
-    color:#f7efef;
+    color:hsl(0, 0%, 1%);
 }
 
 .hero h1 {
@@ -105,25 +105,24 @@ body {
     margin: auto;
 }
 
+
 /* Profile Photo */
 .profile-photo {
-    width: 150px;
-    height: 150px;
-    /* border-radius: 50%; */
+    width: 200px;
+    height: 300px;
+    float: left;
     object-fit: cover;
     border: 4px solid #ff5733;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-}
-
-.profile-photo:hover {
-    transform: scale(1.1);
+    margin-right: 20px; /* Add space between image and text */
 }
 
 /* About Text */
 .about-text {
     max-width: 500px;
     text-align: left;
+    overflow: hidden; /* Ensures text doesn't wrap around the image */
 }
 
 .about-text p {
@@ -134,9 +133,10 @@ body {
 
 /* Highlighted text */
 .highlight {
-    color: #050505;
+    color: hsl(69, 96%, 53%);
     font-weight: bold;
 }
+
 
 
 /* Projects Section */
@@ -187,6 +187,10 @@ body {
 .btn:hover {
     background: #e64a19;
 }
+.project h2{
+    font-size: 1.7rem;
+    
+}
 
 
 /* Contact Section */
@@ -217,7 +221,7 @@ body {
     font-size: 18px;
     font-weight: bold;
     color: #fff;
-    background-color: #ffcc00;
+    background-color: hsl(30, 100%, 50%);
     border-radius: 5px;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
