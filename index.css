@@ -4,8 +4,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color:black;
+    color: #f9f2f2;
 }
 
 /* Navbar */
@@ -16,6 +16,8 @@ body {
     background-color: #222;
     padding: 15px 30px;
     color: white;
+    font-size: 25px;
+
 }
 
 .nav-links {
@@ -29,6 +31,7 @@ body {
     color: white;
     font-weight: bold;
     transition: 0.3s;
+   
 }
 
 .nav-links li a:hover {
@@ -51,7 +54,7 @@ body {
     text-align: center;
     padding: 80px 20px;
     background: url('https://source.unsplash.com/1600x900/?technology,code') no-repeat center center/cover;
-    color:black;
+    color:#f7efef;
 }
 
 .hero h1 {
@@ -78,12 +81,12 @@ body {
     background: #e64a19;
 }
 
-/* About Section */
+
 /* About Section */
 .about {
     padding: 50px;
     text-align: center;
-    background-color: white;
+    background-color: rgb(13, 12, 12);
 }
 
 .about h2 {
@@ -137,11 +140,10 @@ body {
 
 
 /* Projects Section */
-/* Projects Section */
 .projects {
     padding: 50px;
     text-align: center;
-    background-color: white;
+    background-color: rgb(7, 7, 7);
 }
 
 .project-container {
@@ -159,6 +161,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 300px;
     transition: transform 0.3s ease-in-out;
+    color: #050505;
 }
 
 .project-card img {
@@ -190,8 +193,11 @@ body {
 .contact {
     padding: 40px;
     text-align: center;
-    background-color: white;
+    background-color:black;
+    color: white;
 }
+.contact a {
+    text-decoration: none;}
 
 /* Footer */
 footer {
@@ -199,4 +205,5 @@ footer {
     padding: 20px;
     background-color: #222;
     color: white;
+    position: fixed;
 }
