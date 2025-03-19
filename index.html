@@ -32,81 +32,123 @@
             <a href="mailto:poojanalode97@gmail.com"><i class="bi bi-envelope"></i></a>
         </div>
     </nav>
-    <!-- Hero Section -->
-    <header class="hero" id="home">
+Hero Section
+<header class="hero" id="home">
+    <div class="hero-content">
         <h1>Welcome to My Portfolio</h1>
-        <p>Full Stack Developer | Passionate Coder | Problem Solver</p>
-        <a href="#projects" class="btn">View Projects</a>
-    </header>
+        <p>
+            I’m a Full-Stack Developer passionate about crafting modern, responsive, and high-performance websites.
+        </p>
+        <div class="hero-buttons">
+            <a href="#projects" class="btn">View Projects</a>
+            <a href="#contact" class="btn btn-alt">Live Projects</a>
+        </div>
+    </div>
+</header>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <div class="about-content">
+
+   <!-- About Section -->
+<section id="about" class="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+        <div class="about-image">
             <img src="./Images/pooja.png" alt="Pooja's Photo" class="profile-photo">
-            <div class="about-text">
-                <p>Hello! I'm <span class="highlight">Pooja</span>, a full-stack developer passionate about creating modern, responsive, and user-friendly web applications.</p>
-                
-                <p>I have expertise in both front-end  technologies, including <b>React.js, JavaScript,Html,Css</b>. I enjoy solving complex problems and crafting seamless user experiences.</p>
-                
-                <p>Currently, I'm working on exciting projects while continuously learning and exploring new technologies to enhance my skills.</p>
-            </div>
         </div>
-    </section>
+        <div class="about-text">
+            <p>Hello! I'm <span class="highlight">Pooja</span>, a passionate full-stack developer who loves building modern, responsive, and user-friendly web applications.</p>
+
+            <p>I specialize in:</p>
+            
+            <!-- Skill Bars -->
+            <div class="skills">
+                <div class="skill">
+                    <span>HTML & CSS</span>
+                    <div class="skill-bar">
+                        <div class="fill" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>JavaScript</span>
+                    <div class="skill-bar">
+                        <div class="fill" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>React.js</span>
+                    <div class="skill-bar">
+                        <div class="fill" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Node.js</span>
+                    <div class="skill-bar">
+                        <div class="fill" style="width: 75%;"></div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Download CV Button -->
+            <a href="fullstackresume.html"class="cv-btn">Download CV</a>
+        </div>
+    </div>
+</section>
+
+
     
+<!-- Projects Section -->
+<section id="projects" class="projects">
+    <h2>My Projects</h2>
+    <div class="project-container">
+        <!-- HTML Project -->
+        <a href="html-projects.html" class="project-card">
+            <img src="./Images/html.png" alt="HTML Projects">
+            <h3>HTML Projects</h3>
+            <p>Explore my HTML-based projects.</p>
+            <span class="btn">View More</span>
+        </a>
 
+        <!-- CSS Project -->
+        <a href="css-projects.html" class="project-card">
+            <img src="./Images/css.png" alt="CSS Projects">
+            <h3>CSS Projects</h3>
+            <p>Check out my creative CSS designs.</p>
+            <span class="btn">View More</span>
+        </a>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <h2>My Projects</h2>
-        <div class="project-container">
-            <!-- HTML Project -->
-            <div class="project-card">
-                <img src="./Images/html.png">
-                <h3>HTML Projects</h3>
-                <p>Explore my HTML-based projects.</p>
-                <a href="html-projects.html" class="btn">View More</a>
-            </div>
+        <!-- JavaScript Project -->
+        <a href="js-projects.html" class="project-card">
+            <img src="./Images/js2.webp" alt="JavaScript Projects">
+            <h3>JavaScript Projects</h3>
+            <p>See my interactive JavaScript projects.</p>
+            <span class="btn">View More</span>
+        </a>
 
-            <!-- CSS Project -->
-            <div class="project-card">
-                <img src="./Images/css.png">
-                <h3>CSS Projects</h3>
-                <p>Check out my creative CSS designs.</p>
-                <a href="css-projects.html" class="btn">View More</a>
-            </div>
+        <!-- Bootstrap Project -->
+        <a href="gift_shop (1).html" class="project-card">
+            <img src="./Images/bootstrapone.png" alt="Bootstrap Projects">
+            <h3>Bootstrap Projects</h3>
+            <p>Discover responsive designs using Bootstrap.</p>
+            <span class="btn">View More</span>
+        </a>
 
-            <!-- JavaScript Project -->
-            <div class="project-card">
-                <img src="./Images/js2.webp" alt="JavaScript Projects">
-                <h3>JavaScript Projects</h3>
-                <p>See my interactive JavaScript projects.</p>
-                <a href="js-projects.html" class="btn">View More</a>
-            </div>
-            <!-- Bootstrap -->
-            <div class="project-card">
-                <img src="./Images/bootstrapone.png" alt="JavaScript Projects">
-                <h3>Bootstrap Projects</h3>
-                <p>Discover responsive designs using Bootstrap.</p>
-                <a href="gift_shop (1).html" class="btn">View More</a>
-            </div>
-            <!-- react project -->
-            <div class="project-card">
-                <img src="./Images/reactjs.png">
-                <h3>React Projects</h3>
-                <p>See my interactive React projects.</p>
-                <a href="https://bucolic-marshmallow-c85c75.netlify.app/" class="btn">View
-                    More</a>
-            </div>
-            <!-- Live project -->
-            <div class="project-card">
-                <img src="./Images/akashlogo.jpeg">
-                <h3>Akash Travel (Live Project)</h3>
-                <p>A fully functional travel booking website.</p>
-                <a href="akshtours.html" class="btn">View More</a>
-            </div>
-        </div>
-    </section>
+        <!-- React Project -->
+        <a href="https://bucolic-marshmallow-c85c75.netlify.app/" class="project-card" target="_blank">
+            <img src="./Images/reactjs.png" alt="React Projects">
+            <h3>React Projects</h3>
+            <p>See my interactive React projects.</p>
+            <span class="btn">View More</span>
+        </a>
+
+        <!-- Live Project - Akash Travel -->
+        <a href="akshtours.html" class="project-card">
+            <img src="./Images/akashlogo.jpeg" alt="Akash Travel Project">
+            <h3>Akash Travel (Live Project)</h3>
+            <p>A fully functional travel booking website.</p>
+            <span class="btn">View More</span>
+        </a>
+    </div>
+</section>
 
 
     <!-- Contact Section -->

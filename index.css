@@ -14,7 +14,8 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #222;
-    padding: 15px 30px;
+    padding: 0 30px;
+
     color: white;
     font-size: 25px;
 
@@ -48,38 +49,107 @@ body {
 .social-icons a:hover {
     color: #ff5733;
 }
-
 /* Hero Section */
 .hero {
+    height: 100vh; /* Full screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 80px 20px;
+    padding: 50px 20px;
     background: url('https://source.unsplash.com/1600x900/?technology,code') no-repeat center center/cover;
-    color:hsl(0, 0%, 1%);
+    color: white;
+    position: relative;
 }
 
+/* Dark Overlay for better readability */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+/* Content inside hero */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 0 20px;
+
+}
+
+/* Heading */
 .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #111;
+    text-transform: uppercase;
 }
 
+/* Subtext */
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    max-width: 700px;
+    line-height: 1.6;
 }
 
+/* Button Container */
+.hero-buttons {
+    margin-top: 20px;
+}
+
+/* Buttons */
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 14px 30px;
     background: #ff5733;
     color: white;
     text-decoration: none;
-    margin-top: 10px;
-    border-radius: 5px;
-    transition: 0.3s;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    margin: 10px;
 }
 
 .btn:hover {
     background: #e64a19;
+    transform: scale(1.1);
 }
+
+/* Alternative Button */
+.btn-alt {
+    background: #ffcc00;
+    color: black;
+}
+
+.btn-alt:hover {
+    background: #e6b800;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+    .hero p {
+        font-size: 1.2rem;
+    }
+    .btn {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+}
+
+
 
 
 /* About Section */
@@ -87,42 +157,40 @@ body {
     padding: 50px;
     text-align: center;
     background-color: rgb(13, 12, 12);
+    color: white;
 }
 
-.about h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-/* Flexbox layout for profile image and text */
-.about-content {
+.about-container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
 }
 
-
 /* Profile Photo */
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
 .profile-photo {
-    width: 200px;
+    width: 250px;
     height: 300px;
-    float: left;
     object-fit: cover;
     border: 4px solid #ff5733;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-    margin-right: 20px; /* Add space between image and text */
 }
 
 /* About Text */
 .about-text {
-    max-width: 500px;
+    flex: 2;
     text-align: left;
-    overflow: hidden; /* Ensures text doesn't wrap around the image */
+    max-width: 500px;
 }
 
 .about-text p {
@@ -131,66 +199,159 @@ body {
     margin-bottom: 10px;
 }
 
-/* Highlighted text */
-.highlight {
-    color: hsl(69, 96%, 53%);
+/* Skill Bars */
+.skills {
+    margin-top: 15px;
+}
+
+.skill {
+    margin-bottom: 10px;
+}
+
+.skill span {
+    font-size: 1rem;
     font-weight: bold;
 }
 
+.skill-bar {
+    width: 100%;
+    height: 10px;
+    background: #444;
+    border-radius: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+}
 
+.fill {
+    height: 100%;
+    background: #ff5733;
+    transition: width 0.5s ease-in-out;
+}
 
+/* Download CV Button */
+.cv-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ff5733;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cv-btn:hover {
+    background: #e64a19;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        max-width: 100%;
+        text-align: center;
+    }
+}
 /* Projects Section */
 .projects {
     padding: 50px;
     text-align: center;
     background-color: rgb(7, 7, 7);
+    color: white;
 }
 
+.projects h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Project Grid with Proper Gaps */
 .project-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 25px; /* Adjusted gap */
+    max-width: 1200px;
+    margin: auto;
 }
 
+/* Project Card */
 .project-card {
+    display: block;
     background: white;
     padding: 15px;
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    transition: transform 0.3s ease-in-out;
-    color: #050505;
+    width: 300px;  /* Fixed width */
+    height: 400px; /* Fixed height (Ensures equal card size) */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    color: black;
+    text-decoration: none;
+    position: relative;
 }
 
+/* Project Images */
 .project-card img {
-    width: 100%;
+    width: 60%;
+    height: 190px; /* Keeps the image size fixed */
     border-radius: 5px;
+    object-fit: cover;
 }
 
+/* Project Titles */
+.project-card h3 {
+    font-size: 1.5rem;
+    margin: 15px 0 10px;
+}
+
+/* Project Descriptions */
+.project-card p {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+/* Hover Effects */
 .project-card:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255, 87, 51, 0.5);
 }
 
-.btn {
+/* View More Button */
+.project-card .btn {
     display: inline-block;
     margin-top: 10px;
-    padding: 8px 15px;
+    padding: 10px 18px;
     background-color: #ff5733;
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    transition: background 0.3s;
+    font-weight: bold;
+    transition: 0.3s;
+    text-align: center;
+    cursor: pointer;
 }
 
-.btn:hover {
+.project-card .btn:hover {
     background: #e64a19;
 }
-.project h2{
-    font-size: 1.7rem;
-    
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
+
 
 
 /* Contact Section */
